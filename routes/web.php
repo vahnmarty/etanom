@@ -16,9 +16,7 @@ use App\Http\Controllers\NewsletterController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::redirect('/', '/newsletter');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

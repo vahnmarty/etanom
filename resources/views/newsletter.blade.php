@@ -1,5 +1,15 @@
 @extends('layouts.blank')
 
+@section('seo')
+    @include('includes.partials.seo', [
+        'title' => 'eTanom Newsletter',
+        'url' => request()->url(),
+        'description' => 'Join our email list and get notified of when we launch eTanom this 2023!',
+        'image' => url('img/og.jpeg'),
+        'keywords' => 'sikai, galansiyang, reforestation, climate change, newsletter, gforest',
+    ])
+@endsection
+
 @section('content')
     <div class="min-h-screen bg-left-top bg-no-repeat lg:max-h-screen lg:overflow-hidden lg:bg-center"
         style="background-image: url('img/bg-hero.png');">
@@ -34,10 +44,11 @@
                         <form action="{{ url('newsletter') }}" class="mt-8">
                             @csrf
                             <div class="flex border border-light-green">
-                                <input type="email"
-                                    class="flex-1 pl-4 bg-transparent border-none placeholder:text-light-green"
+                                <input type="email" name="email" autofocus
+                                    class="flex-1 pl-4 text-white bg-transparent border-none placeholder:text-light-green hover:bg-light-green/20 focus:ring-1 focus:ring-inset focus:ring-light-green"
                                     placeholder="Enter your email">
-                                <button type="submit" class="px-8 bg-light-green">Notify Me!</button>
+                                <button type="submit" class="px-8 bg-light-green hover:bg-light-green/90">Notify
+                                    Me!</button>
                             </div>
                         </form>
 
