@@ -14,7 +14,7 @@
     <div class="min-h-screen bg-left-top bg-no-repeat lg:max-h-screen lg:overflow-hidden lg:bg-center"
         style="background-image: url('img/bg-hero.png');">
         <div class="py-12 md:py-20 lg:py-20">
-            <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div class="px-4 mx-auto sm:px-6 lg:max-w-7xl lg:px-8">
                 <div class="grid gap-16 lg:grid-cols-2">
                     <div class="flex flex-col">
                         <div>
@@ -24,10 +24,11 @@
                         <h2 class="mt-16 text-4xl font-bold text-white lg:text-6xl">Sprouting Soon!</h2>
 
                         <h4 class="mt-8 text-xl font-bold leading-1 text-light-green lg:text-3xl">
-                            Join our email list and get notified<br> of when we launch eTanom this 2023!
+                            Join our email list and get notified of when we launch eTanom
+                            this 2023!
                         </h4>
 
-                        <div class="block p-4 mt-8 text-center bg-red-500 border-4 border-white rounded-sm lg:hidden">
+                        <div class="block p-4 mt-8 text-center border-4 border-white rounded-sm bg-light-green lg:hidden">
                             <img src="{{ asset('img/preview.png') }}" class="w-auto h-24 mx-auto">
                         </div>
 
