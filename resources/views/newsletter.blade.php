@@ -27,9 +27,8 @@
                             Join our email list and get notified<br> of when we launch eTanom this 2023!
                         </h4>
 
-                        <div
-                            class="flex items-center justify-center w-full p-4 mx-auto mt-8 border-4 border-white rounded-sm bg-light-green lg:hidden">
-                            <img src="{{ asset('img/preview.png') }}" class="w-auto h-32">
+                        <div class="block p-4 mt-8 text-center border-4 border-white rounded-sm bg-light-green lg:hidden">
+                            <img src="{{ asset('img/preview.png') }}" class="w-auto h-24 mx-auto">
                         </div>
 
                         <p class="mt-8 text-sm font-light text-white lg:text-base">
