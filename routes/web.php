@@ -3,6 +3,7 @@
 use App\Http\Livewire\Calculator;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\NewsletterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,5 +31,7 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('calculator', Calculator::class);
+
+Route::get('newsletter', [NewsletterController::class, 'create'])->name('newsletter.create');
 
 require __DIR__.'/auth.php';
