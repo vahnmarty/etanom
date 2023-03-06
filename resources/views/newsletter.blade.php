@@ -28,7 +28,7 @@
                         </h4>
 
                         <div
-                            class="flex items-center justify-center w-full p-4 mx-auto mt-8 border-4 border-white rounded-sm bg-light-green lg:hidden lg:h-64 lg:w-64 lg:rounded-full">
+                            class="flex items-center justify-center w-full p-4 mx-auto mt-8 border-4 border-white rounded-sm bg-light-green lg:hidden">
                             <img src="{{ asset('img/preview.png') }}" class="w-auto h-32">
                         </div>
 
