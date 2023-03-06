@@ -45,7 +45,7 @@
                             @csrf
                             <div class="border rounded-sm border-light-green lg:flex lg:rounded-none">
                                 <input type="email" name="email" autofocus
-                                    class="flex-1 pl-4 text-white bg-transparent border-none placeholder:text-light-green hover:bg-light-green/20 focus:ring-1 focus:ring-inset focus:ring-light-green"
+                                    class="flex-1 w-full pl-4 pr-4 text-white bg-transparent border-none placeholder:text-light-green hover:bg-light-green/20 focus:ring-1 focus:ring-inset focus:ring-light-green"
                                     placeholder="Enter your email">
                                 <button type="submit"
                                     class="hidden px-8 bg-light-green hover:bg-light-green/90 lg:block">Notify
