@@ -11,7 +11,7 @@ class NewsletterController extends Controller
 {
     public function create(Request $request)
     {
-        return view('newsletter.sent');
+        return view('newsletter.index');
     }
 
     public function store(Request $request)
