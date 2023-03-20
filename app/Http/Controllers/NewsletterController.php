@@ -30,7 +30,7 @@ class NewsletterController extends Controller
             $subscription->sent_at = now();
             $subscription->save();
 
-            return redirect('newsletter.sent');
+            return view('newsletter.sent');
 
         } catch (\Throwable $th) {
             throw $th;
