@@ -31,5 +31,6 @@ Route::middleware('auth')->group(function () {
 Route::get('calculator', Calculator::class);
 
 Route::get('newsletter', [NewsletterController::class, 'create'])->name('newsletter.create');
+Route::post('newsletter', [NewsletterController::class, 'store'])->name('newsletter.store');
 
 require __DIR__.'/auth.php';

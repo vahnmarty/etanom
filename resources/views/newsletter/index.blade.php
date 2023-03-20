@@ -12,7 +12,7 @@
 
 @section('content')
     <div class="min-h-screen bg-left-top bg-no-repeat lg:max-h-screen lg:overflow-hidden lg:bg-center"
-        style="background-image: url('img/bg-hero.png');">
+        style="background-image: url('https://etanom-assets.s3.ap-northeast-1.amazonaws.com/images/bg-hero.webp')">
         <div class="py-12 md:py-20 lg:py-20">
             <div class="px-4 mx-auto sm:px-6 lg:max-w-7xl lg:px-8">
                 <div class="grid gap-16 lg:grid-cols-2">
@@ -41,7 +41,7 @@
                             So don't hesitate to subscribe and join us on our mission to create a sustainable future!
                         </p>
 
-                        <form action="{{ url('newsletter') }}" class="mt-8">
+                        <form action="{{ url('newsletter') }}" method="POST" class="mt-8">
                             @csrf
                             <div class="border rounded-sm border-light-green lg:flex lg:rounded-none">
                                 <input type="email" name="email" autofocus
