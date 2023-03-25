@@ -33,4 +33,6 @@ Route::get('calculator', Calculator::class);
 Route::get('newsletter', [NewsletterController::class, 'create'])->name('newsletter.create');
 Route::post('newsletter', [NewsletterController::class, 'store'])->name('newsletter.store');
 
+//Route::get('shop', Catalog::class);
+
 require __DIR__.'/auth.php';

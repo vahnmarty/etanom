@@ -22,8 +22,8 @@
         
           </nav>
           <div class="flex items-center md:ml-12">
-            <a href="#" class="text-base font-medium text-light-green/90 hover:text-light-green hover:underline">Sign in</a>
-            <a href="#" class="inline-flex items-center justify-center px-4 py-2 ml-8 text-base font-medium text-gray-900 border border-transparent rounded-md shadow-sm bg-light-green hover:bg-light-green/80">Sign up</a>
+            <a href="{{ route('login') }}" class="text-base font-medium text-light-green/90 hover:text-light-green hover:underline">Sign in</a>
+            <a href="{{ route('register') }}" class="inline-flex items-center justify-center px-4 py-2 ml-8 text-base font-medium text-gray-900 border border-transparent rounded-md shadow-sm bg-light-green hover:bg-light-green/80">Sign up</a>
           </div>
         </div>
       </div>
