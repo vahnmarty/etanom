@@ -51,6 +51,13 @@ return [
     */
 
     'channels' => [
+
+        'openai' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/openai.log'),
+            'level' => env('LOG_LEVEL', 'debug'),
+        ],
+        
         'stack' => [
             'driver' => 'stack',
             'channels' => ['single'],

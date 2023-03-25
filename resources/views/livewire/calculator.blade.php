@@ -1,21 +1,44 @@
-<div class="px-4 mx-auto max-w-5xl sm:px-6">
-    <div class="flex pt-12">
-        <div class="w-32">
-            <div id="questionProgress" class="css-u47x9i"><div id="country" class="css-1dmva6t"><div class="css-12r5et8"><img src="https://projectwren.imgix.net/calculator-icons/cloud_earth.png?auto=format%2Ccompress&amp;q=35" class="css-d373a"></div><cite class="css-1utoj9u">Country</cite></div><div id="calculationType" class="css-unw8dt"><div class="css-1801cj6"><img src="https://projectwren.imgix.net/calculator-icons/cloud_family.png?auto=format%2Ccompress&amp;q=35" class="css-1vlpmsu"><svg width="20" height="20" class="css-ynmqe6" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M25 0C11.1111 0 0 11.1111 0 25C0 38.8889 11.1111 50 25 50C38.8889 50 50 38.8889 50 25C50 11.1111 38.8889 0 25 0ZM34.7222 18.0556L25 33.6111C24.7222 34.4444 23.8889 34.7222 23.3333 34.7222C22.7778 34.7222 21.9444 34.4444 21.6667 33.8889L16.6667 27.5C16.3889 27.2222 16.1111 26.6667 16.1111 26.1111C16.1111 25 16.9444 24.1667 18.0556 24.1667C18.6111 24.1667 19.4444 24.4444 19.7222 25L23.3333 29.4444L31.3889 16.1111C31.3889 15.8333 31.6667 15.8333 31.6667 15.8333C31.9444 15.2778 32.5 15 33.0556 15C34.1667 15 35 15.8333 35 16.9444C35 17.5 35 17.7778 34.7222 18.0556Z" fill="var(--success-green)"></path><path d="M25 33.6111L34.7222 18.0556C35 17.7778 35 17.5 35 16.9444C35 15.8333 34.1667 15 33.0556 15C32.5 15 31.9444 15.2778 31.6667 15.8333C31.6667 15.8333 31.3889 15.8333 31.3889 16.1111L23.3333 29.4444L19.7222 25C19.4444 24.4444 18.6111 24.1667 18.0556 24.1667C16.9444 24.1667 16.1111 25 16.1111 26.1111C16.1111 26.6667 16.3889 27.2222 16.6667 27.5L21.6667 33.8889C21.9444 34.4444 22.7778 34.7222 23.3333 34.7222C23.8889 34.7222 24.7222 34.4444 25 33.6111Z" fill="white"></path></svg></div><cite class="css-4sqi5">Household</cite></div><div id="transportNumberOfCars" class="css-unw8dt"><div class="css-1801cj6"><img src="https://projectwren.imgix.net/calculator-icons/cloud_car.png?auto=format%2Ccompress&amp;q=35" class="css-1vlpmsu"></div><cite class="css-4sqi5">Cars</cite></div><div id="transportDomesticFlightsPerYear" class="css-unw8dt"><div class="css-1801cj6"><img src="https://projectwren.imgix.net/calculator-icons/cloud_plane.png?auto=format%2Ccompress&amp;q=35" class="css-1vlpmsu"></div><cite class="css-4sqi5">Short flights</cite></div><div id="transportInternationalFlightsPerYear" class="css-unw8dt"><div class="css-1801cj6"><img src="https://projectwren.imgix.net/calculator-icons/cloud_plane_jumbo.png?auto=format%2Ccompress&amp;q=35" class="css-1vlpmsu"></div><cite class="css-4sqi5">Long flights</cite></div><div id="dietPreference" class="css-unw8dt"><div class="css-1801cj6"><img src="https://projectwren.imgix.net/calculator-icons/cloud_veggies.png?auto=format%2Ccompress&amp;q=35" class="css-1vlpmsu"></div><cite class="css-4sqi5">Diet</cite></div><div id="dietRedMeatPerWeek" class="css-unw8dt"><div class="css-1801cj6"><img src="https://projectwren.imgix.net/calculator-icons/cloud_meat.png?auto=format%2Ccompress&amp;q=35" class="css-1vlpmsu"></div><cite class="css-4sqi5">Red meat</cite></div><div id="dietOtherProteinsPerWeek" class="css-unw8dt"><div class="css-1801cj6"><img src="https://projectwren.imgix.net/calculator-icons/cloud_chicken.png?auto=format%2Ccompress&amp;q=35" class="css-1vlpmsu"></div><cite class="css-4sqi5">Other protein</cite></div><div id="dietDairyPerWeek" class="css-unw8dt"><div class="css-1801cj6"><img src="https://projectwren.imgix.net/calculator-icons/cloud_dairy.png?auto=format%2Ccompress&amp;q=35" class="css-1vlpmsu"></div><cite class="css-4sqi5">Dairy</cite></div><div id="homeSquareFeet" class="css-unw8dt"><div class="css-1801cj6"><img src="https://projectwren.imgix.net/calculator-icons/cloud_house.png?auto=format%2Ccompress&amp;q=35" class="css-1vlpmsu"></div><cite class="css-4sqi5">Home size</cite></div><div id="pets" class="css-unw8dt"><div class="css-1801cj6"><img src="https://projectwren.imgix.net/calculator-icons/cloud_pet.png?auto=format%2Ccompress&amp;q=35" class="css-1vlpmsu"><svg width="20" height="20" class="css-ynmqe6" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M25 0C11.1111 0 0 11.1111 0 25C0 38.8889 11.1111 50 25 50C38.8889 50 50 38.8889 50 25C50 11.1111 38.8889 0 25 0ZM34.7222 18.0556L25 33.6111C24.7222 34.4444 23.8889 34.7222 23.3333 34.7222C22.7778 34.7222 21.9444 34.4444 21.6667 33.8889L16.6667 27.5C16.3889 27.2222 16.1111 26.6667 16.1111 26.1111C16.1111 25 16.9444 24.1667 18.0556 24.1667C18.6111 24.1667 19.4444 24.4444 19.7222 25L23.3333 29.4444L31.3889 16.1111C31.3889 15.8333 31.6667 15.8333 31.6667 15.8333C31.9444 15.2778 32.5 15 33.0556 15C34.1667 15 35 15.8333 35 16.9444C35 17.5 35 17.7778 34.7222 18.0556Z" fill="var(--success-green)"></path><path d="M25 33.6111L34.7222 18.0556C35 17.7778 35 17.5 35 16.9444C35 15.8333 34.1667 15 33.0556 15C32.5 15 31.9444 15.2778 31.6667 15.8333C31.6667 15.8333 31.3889 15.8333 31.3889 16.1111L23.3333 29.4444L19.7222 25C19.4444 24.4444 18.6111 24.1667 18.0556 24.1667C16.9444 24.1667 16.1111 25 16.1111 26.1111C16.1111 26.6667 16.3889 27.2222 16.6667 27.5L21.6667 33.8889C21.9444 34.4444 22.7778 34.7222 23.3333 34.7222C23.8889 34.7222 24.7222 34.4444 25 33.6111Z" fill="white"></path></svg></div><cite class="css-4sqi5">Pets</cite></div><div id="transportMethod" class="css-unw8dt"><div class="css-1801cj6"><img src="https://projectwren.imgix.net/calculator-icons/cloud_bus.png?auto=format%2Ccompress&amp;q=35" class="css-1vlpmsu"></div><cite class="css-4sqi5">Public transit</cite></div><div id="transportBusMilesPerWeek" class="css-unw8dt"><div class="css-1801cj6"><img src="https://projectwren.imgix.net/calculator-icons/cloud_bus.png?auto=format%2Ccompress&amp;q=35" class="css-1vlpmsu"></div><cite class="css-4sqi5">Bus per week</cite></div><div id="transportTransitRailMilesPerWeek" class="css-unw8dt"><div class="css-1801cj6"><img src="https://projectwren.imgix.net/calculator-icons/cloud_rail.png?auto=format%2Ccompress&amp;q=35" class="css-1vlpmsu"></div><cite class="css-4sqi5">Transit rail</cite></div><div id="transportInterCityRailMilesPerYear" class="css-unw8dt"><div class="css-1801cj6"><img src="https://projectwren.imgix.net/calculator-icons/cloud_inter-city.png?auto=format%2Ccompress&amp;q=35" class="css-1vlpmsu"></div><cite class="css-4sqi5">Inter-city</cite></div><div id="goodsFurnitureAppliancesDollarsSpentPerMonth" class="css-unw8dt"><div class="css-1801cj6"><img src="https://projectwren.imgix.net/calculator-icons/cloud_couch.png?auto=format%2Ccompress&amp;q=35" class="css-1vlpmsu"></div><cite class="css-4sqi5">Furnishings</cite></div><div id="goodsClothesDollarsSpentPerMonth" class="css-unw8dt"><div class="css-1801cj6"><img src="https://projectwren.imgix.net/calculator-icons/cloud_clothes.png?auto=format%2Ccompress&amp;q=35" class="css-1vlpmsu"></div><cite class="css-4sqi5">Clothes</cite></div><div id="goodsOtherDollarsSpentPerMonth" class="css-unw8dt"><div class="css-1801cj6"><img src="https://projectwren.imgix.net/calculator-icons/cloud_supplies.png?auto=format%2Ccompress&amp;q=35" class="css-1vlpmsu"></div><cite class="css-4sqi5">Supplies</cite></div><div id="servicesDollarsSpentPerMonth" class="css-unw8dt"><div class="css-1801cj6"><img src="https://projectwren.imgix.net/calculator-icons/cloud_services.png?auto=format%2Ccompress&amp;q=35" class="css-1vlpmsu"></div><cite class="css-4sqi5">Services</cite></div><div id="electricityKwhPerMonth" class="css-unw8dt"><div class="css-1801cj6"><img src="https://projectwren.imgix.net/calculator-icons/cloud_battery.png?auto=format%2Ccompress&amp;q=35" class="css-1vlpmsu"></div><cite class="css-4sqi5">Electricity</cite></div><div id="electricityPercentRenewable" class="css-unw8dt"><div class="css-1801cj6"><img src="https://projectwren.imgix.net/calculator-icons/cloud_renewables.png?auto=format%2Ccompress&amp;q=35" class="css-1vlpmsu"></div><cite class="css-4sqi5">Renewables</cite></div><div id="naturalGasBurnedPerMonth" class="css-unw8dt"><div class="css-1801cj6"><img src="https://projectwren.imgix.net/calculator-icons/cloud_natural_gas.png?auto=format%2Ccompress&amp;q=35" class="css-1vlpmsu"></div><cite class="css-4sqi5">Natural gas</cite></div><div id="finish" class="css-unw8dt"><div class="css-1801cj6"><img src="https://projectwren.imgix.net/calculator-icons/cloud_finish_flag.png?auto=format%2Ccompress&amp;q=35" class="css-1vlpmsu"></div><cite class="css-4sqi5">Finish</cite></div></div>
-        </div>
-        <div class="grow px-16">
-            <div>
-                <h2 class="font-bold text-4xl">Start by calculating your footprint. What country do you live in?
-                </h2>
-                <p class="mt-4">Entering your country helps us begin the calculation with a baseline for every category.</p>
+<div class="max-w-5xl px-4 mx-auto sm:px-6">
+
+    <div class="grid grid-cols-5 gap-6">
+        <div></div>
+        <div class="col-span-3">
+            <div class="py-6">
+                <h2 class="text-3xl font-bold">Carbon Emission Calculator</h2>
+        
+                <div class="mt-8 space-y-8">
+
+                    @foreach($categories as $category)
+                    <div class="p-8 border border-gray-300 rounded-md bg-gray-50">
+                        <h3 class="text-xl font-bold text-orange-600">{{ $category['title'] }}</h3>
+                        <p class="mt-2 text-sm">{{ $category['description'] }}</p>
+        
+                        <div x-data="{ option: null }"  class="mt-4 space-y-4">
+                            @foreach($category['options'] as $option)
+                            <label 
+                                :class="option == `{{ $option['name'] }}` ? 'bg-light-green  border-transparent' :'' "
+                                class="flex items-center justify-between px-4 py-2 duration-300 ease-in-out bg-white border-2 border-gray-300 rounded-md cursor-pointer hover:bg-light-green hover:border-light-green">
+                                <input type="radio" x-model="option" wire:model="inputs.{{ $category['title'] }}" value="{{ $option['name'] }}" class="hidden">
+                                <p class="font-bold text-gray-900">{{ $option['name'] }}</p>
+                                <span class="text-sm text-gray-500"></span>
+                            </label>
+                            @endforeach
+                        </div>
+                          
+                    </div>
+                    @endforeach
+                </div>
+
+                <div class="flex justify-center mt-8">
+                    <button type="button" wire:click="calculate" class="px-8 py-3 rounded-md bg-light-green hover:bg-light-green/90 lg:block">Calculate</button>
+                </div>
+               
             </div>
         </div>
-        <div class="w-96">
-            <div class="rounded-md bg-indigo-100 p-4">
-                <h3 class="font-bold">Berkeley</h3>
-                <p class="text-sm text-indigo-500">Wren partners with UC Berkeley’s CoolClimate Network to estimate your carbon footprint.</p>
-            </div>
+        <div class="">
+            @dump($inputs)
         </div>
     </div>
+    
     
 </div>

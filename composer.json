@@ -7,13 +7,15 @@
     "require": {
         "php": "^8.0.2",
         "aws/aws-sdk-php": "^3.261",
+        "blade-ui-kit/blade-icons": "^1.5",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^9.19",
         "laravel/sanctum": "^3.0",
         "laravel/tinker": "^2.7",
         "laravel/vapor-cli": "^1.54",
         "laravel/vapor-core": "^2.28",
-        "livewire/livewire": "^2.11"
+        "livewire/livewire": "^2.11",
+        "openai-php/laravel": "^0.4.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
@@ -62,7 +64,8 @@
         "preferred-install": "dist",
         "sort-packages": true,
         "allow-plugins": {
-            "pestphp/pest-plugin": true
+            "pestphp/pest-plugin": true,
+            "php-http/discovery": true
         }
     },
     "minimum-stability": "stable",
