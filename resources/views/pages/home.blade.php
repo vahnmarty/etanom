@@ -6,18 +6,18 @@
         <img src="{{ asset('img/hero1.png') }}" class="kenburns-img">
         <div class="absolute inset-0 top-0 z-10 bg-gray-900/40">
             <div class="flex flex-col items-center justify-center h-full text-center">
-                <h1 class="font-extrabold tracking-wide text-white uppercase text-7xl">Easy Access <br>to Reforestation</h1>
-                <p class="mt-8 text-2xl font-bold text-white">We plant and nurture forests for you.</p>
+                <h1 class="text-3xl font-extrabold tracking-wide text-white uppercase lg:text-7xl">Easy Access <br>to Reforestation</h1>
+                <p class="mt-8 font-bold text-white md:text-2xl">We plant and nurture forests for you.</p>
 
                 <a href="" class="mt-8 btn-primary">Make an Impact Now</a>
             </div>
         </div>
     </div>
 
-    <section class="max-w-5xl px-4 py-32 mx-auto bg-white sm:px-6">
+    <section class="max-w-5xl px-4 py-16 mx-auto bg-white lg:py-32 sm:px-6">
         <div class="grid grid-cols-12 gap-8">
             <div class="col-span-7">
-                <div class="p-6">
+                <div class="lg:-6">
                     <img src="{{ asset('img/plant2.jpg') }}" alt="">
                     <a class="mt-2 text-sm italic"
                         href="https://www.freepik.com/free-photo/boy-are-stand-holding-seedlings-are-dry-land-warming-world_5469350.htm#query=climate%20change&position=4&from_view=search&track=robertav1_2_sidr">Image
@@ -25,23 +25,23 @@
                 </div>
             </div>
             <div class="col-span-5">
-                <h3 class="text-3xl font-bold text-normal-green">It’s time to disrupt reforestation</h3>
+                <h3 class="font-bold lg:text-3xl text-normal-green">It’s time to disrupt reforestation</h3>
 
-                <p class="mt-8 text-lg text-gray-700">In order to protect and nurture our forests, we aim to plant trees
+                <p class="mt-4 text-sm text-gray-700 lg:mt-8 lg:text-lg">In order to protect and nurture our forests, we aim to plant trees
                     faster than we
                     are
                     cutting them. </p>
 
-                <p class="mt-8 text-lg text-gray-700">We do this by using the latest technology, and engaging in multisector
+                <p class="hidden mt-8 text-gray-700 lg:block lg:text-lg">We do this by using the latest technology, and engaging in multisector
                     collaboration!</p>
 
                 <a href="" class="mt-8 btn-primary">Learn more</a>
             </div>
         </div>
 
-        <div class="grid grid-cols-12 gap-8 py-16 mt-16">
-            <div class="col-span-7">
-                <h3 class="text-3xl font-extrabold text-normal-green">Start-to-finish <br>reforestation package</h3>
+        <div class="grid gap-8 py-16 mt-8 lg:grid-cols-12 lg:mt-16">
+            <div class="lg:col-span-7">
+                <h3 class="text-lg font-extrabold lg:text-3xl text-normal-green">Start-to-finish <br class="hidden lg:inline">reforestation package</h3>
 
                 <p class="mt-8 text-lg">There’s no need to stress about how to take immediate environmental action. </p>
 
@@ -100,7 +100,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-span-5">
+            <div class="hidden lg:col-span-5 lg:block">
 
                 <div class="h-48 bg-gray-300 w-96"></div>
 
@@ -134,7 +134,7 @@
             </div>
         </div>
 
-        <div class="relative top-0 overflow-hidden bg-indigo-600 h-80 md:absolute md:right-0 md:h-full md:w-1/3 lg:w-1/2">
+        <div class="relative top-0 hidden overflow-hidden bg-indigo-600 lg:block h-80 md:absolute md:right-0 md:h-full md:w-1/3 lg:w-1/2">
             <img class="object-cover w-full h-full" src="{{ asset('img/tree1.png') }}" alt="">
             <svg viewBox="0 0 926 676" aria-hidden="true"
                 class="absolute -bottom-24 left-24 w-[57.875rem] transform-gpu blur-[118px]">
@@ -155,7 +155,7 @@
 
         <div class="text-center">
             <h2 class="text-4xl font-extrabold text-normal-green">Not yet ready for any commitments? </h2>
-            <p class="mt-6 text-2xl">
+            <p class="mt-6 lg:text-2xl">
                 No worries, you can still make a one time purchase without creating an account.
             </p>
 
