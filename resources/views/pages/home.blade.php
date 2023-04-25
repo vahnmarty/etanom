@@ -6,7 +6,7 @@
         <img src="{{ asset('img/hero1.png') }}" class="kenburns-img">
         <div class="absolute inset-0 top-0 z-10 bg-gray-900/40">
             <div class="flex flex-col items-center justify-center h-full text-center">
-                <h1 class="text-3xl font-extrabold tracking-wide text-white uppercase lg:text-7xl">Easy Access <br>to Reforestation</h1>
+                <h1 class="mt-8 text-3xl font-extrabold tracking-wide text-white uppercase lg:mt-0 lg:text-7xl">Easy Access <br>to Reforestation</h1>
                 <p class="mt-8 font-bold text-white md:text-2xl">We plant and nurture forests for you.</p>
 
                 <a href="" class="mt-8 btn-primary">Make an Impact Now</a>
@@ -15,16 +15,16 @@
     </div>
 
     <section class="max-w-5xl px-4 py-16 mx-auto bg-white lg:py-32 sm:px-6">
-        <div class="grid grid-cols-12 gap-8">
-            <div class="col-span-7">
+        <div class="grid grid-cols-5 gap-4 lg:grid-cols-12 lg:gap-8">
+            <div class="col-span-2 lg:col-span-7">
                 <div class="lg:-6">
                     <img src="{{ asset('img/plant2.jpg') }}" alt="">
-                    <a class="mt-2 text-sm italic"
+                    <a class="mt-2 text-xs italic lg:text-sm"
                         href="https://www.freepik.com/free-photo/boy-are-stand-holding-seedlings-are-dry-land-warming-world_5469350.htm#query=climate%20change&position=4&from_view=search&track=robertav1_2_sidr">Image
                         by jcomp</a>
                 </div>
             </div>
-            <div class="col-span-5">
+            <div class="col-span-3 lg:col-span-5">
                 <h3 class="font-bold lg:text-3xl text-normal-green">It’s time to disrupt reforestation</h3>
 
                 <p class="mt-4 text-sm text-gray-700 lg:mt-8 lg:text-lg">In order to protect and nurture our forests, we aim to plant trees
