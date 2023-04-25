@@ -6,7 +6,7 @@
         <img src="{{ asset('img/hero1.png') }}" class="kenburns-img">
         <div class="absolute inset-0 top-0 z-10 bg-gray-900/40">
             <div class="flex flex-col items-center justify-center h-full text-center">
-                <h1 class="mt-8 text-3xl font-extrabold tracking-wide text-white uppercase lg:mt-0 lg:text-7xl">Easy Access <br>to Reforestation</h1>
+                <h1 class="mt-20 text-3xl font-extrabold tracking-wide text-white uppercase lg:mt-0 lg:text-7xl">Easy Access <br>to Reforestation</h1>
                 <p class="mt-8 font-bold text-white md:text-2xl">We plant and nurture forests for you.</p>
 
                 <a href="" class="mt-8 btn-primary">Make an Impact Now</a>

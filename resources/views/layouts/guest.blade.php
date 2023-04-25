@@ -17,6 +17,17 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
+        <style>
+
+            html,body{
+                font-family: 'Poppins', sans-serif;
+            }
+
+            [x-cloak]{
+                display: none;
+            }
+        </style>
+
         @livewireStyles
     </head>
     <body class="font-sans antialiased text-gray-900">
