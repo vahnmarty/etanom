@@ -5,7 +5,7 @@
         'title' => 'eTanom - Easy Access to Reforestation',
         'url' => request()->url(),
         'description' => 'We plant and nurture forests for you.',
-        'image' => url('img/plant2.jpg'),
+        'image' => url('img/plant.png'),
         'keywords' => 'sikai, galansiyang, reforestation, climate change, newsletter, gforest',
     ])
 @endsection
@@ -28,10 +28,7 @@
         <div class="grid grid-cols-5 gap-4 lg:grid-cols-12 lg:gap-8">
             <div class="col-span-2 lg:col-span-7">
                 <div class="lg:-6">
-                    <img src="{{ asset('img/plant2.jpg') }}" alt="">
-                    <a class="mt-2 text-xs italic lg:text-sm"
-                        href="https://www.freepik.com/free-photo/boy-are-stand-holding-seedlings-are-dry-land-warming-world_5469350.htm#query=climate%20change&position=4&from_view=search&track=robertav1_2_sidr">Image
-                        by jcomp</a>
+                    <img src="{{ asset('img/plant.png') }}" class="h-36 lg:h-64" alt="">
                 </div>
             </div>
             <div class="col-span-3 lg:col-span-5">
