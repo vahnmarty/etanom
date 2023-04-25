@@ -2,6 +2,7 @@
 
 use App\Http\Livewire\Calculator;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\NewsletterController;
 
@@ -16,7 +17,7 @@ use App\Http\Controllers\NewsletterController;
 |
 */
 
-Route::redirect('/', '/newsletter');
+Route::get('/', [PageController::class, 'home'])->name('page.home');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
