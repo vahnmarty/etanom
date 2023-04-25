@@ -1,5 +1,15 @@
 @extends('layouts.guest')
 
+@section('seo')
+    @include('includes.partials.seo', [
+        'title' => 'eTanom - Easy Access to Reforestation',
+        'url' => request()->url(),
+        'description' => 'We plant and nurture forests for you.',
+        'image' => url('img/plant2.jpg'),
+        'keywords' => 'sikai, galansiyang, reforestation, climate change, newsletter, gforest',
+    ])
+@endsection
+
 @section('content')
     <div class="kenburns">
         @include('includes.header')
