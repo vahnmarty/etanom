@@ -31,13 +31,18 @@
 
         @livewireStyles
     </head>
-    <body class="font-sans antialiased text-gray-900">
+    <body class="font-sans antialiased text-gray-900 bg-gray-50">
         
+
+        <div class="bg-gray-100 shadow-md">
+            @include('includes.top-header')
+        </div>
         
         {{ $slot ?? ''}}
         @yield('content')
 
         @include('includes.footer')
+        
         @livewireScripts
     </body>
 </html>

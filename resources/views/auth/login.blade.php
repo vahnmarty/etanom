@@ -1,6 +1,7 @@
-<x-guest-layout>
-    <!-- Session Status -->
-    <div class="max-w-xl mx-auto mt-8">
+@extends('layouts.auth')
+
+@section('content')
+    <div class="max-w-xl py-16 mx-auto mt-8 h-96">
         <x-auth-session-status class="mb-4" :status="session('status')" />
 
         <form method="POST" action="{{ route('login') }}">
@@ -44,6 +45,12 @@
                     {{ __('Log in') }}
                 </x-primary-button>
             </div>
+
+            <div class="pt-4 mt-4 text-center border-t">
+                <a class="text-sm text-gray-600 rounded-md dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('password.request') }}">
+                    No account? <a href="{{ route('register') }}" class="font-bold underline">Sign up</a> now!
+                </a>
+            </div>
         </form>
     </div>
-</x-guest-layout>
+@endsection
