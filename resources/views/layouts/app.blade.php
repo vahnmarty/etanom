@@ -17,19 +17,16 @@
         <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
             @include('layouts.navigation')
 
-            <!-- Page Heading -->
-            @if (isset($header))
-                <header class="bg-white dark:bg-gray-800 shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                        {{ $header }}
-                    </div>
-                </header>
-            @endif
+            <div class="bg-white lg:flex">
 
-            <!-- Page Content -->
-            <main>
-                {{ $slot }}
-            </main>
+                @include('includes.sidebar')
+        
+                <div class="flex-1">
+                    <main class="px-4 py-3 lg:px-16 lg:py-6">
+                        {{ $slot }}
+                    </main>
+                </div>
+            </div>
         </div>
     </body>
 </html>
