@@ -18,10 +18,10 @@
             <div class="grid gap-8 mt-8 lg:grid-cols-2 xl:grid-cols-3">
 
                 <div>
-                    <h4 class="text-2xl font-bold text-gray-900">
+                    <h4 class="text-2xl font-bold text-white ">
                         Reforestation Package
                     </h4>
-                    <div class="p-8 mt-8 bg-green-500 rounded-md shadow-md text-gray-50">
+                    <div class="p-8 mt-8 text-white bg-green-500 rounded-md">
                         <div class="flex gap-3">
                             <h2 class="font-extrabold text-7xl">1</h2>
                             <div>
@@ -33,10 +33,10 @@
                 </div>
 
                 <div>
-                    <h4 class="text-2xl font-bold text-gray-900">
+                    <h4 class="text-2xl font-bold text-white ">
                         Estimated Carbon
                     </h4>
-                    <div class="p-8 mt-8 rounded-md shadow-md bg-fuchsia-400 text-gray-50">
+                    <div class="p-8 mt-8 text-white rounded-md shadow-md bg-fuchsia-400 ">
                         <div class="flex gap-3">
                             <h2 class="font-extrabold text-7xl">12</h2>
                             <div>
