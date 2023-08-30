@@ -17,14 +17,14 @@
                     <strong>Purchase</strong>
                 </x-sidebar-item>
 
-                <x-sidebar-item href="{{ url('cart') }}" :active="request()->is('cart')">
+                <x-sidebar-item href="{{ url('cart') }}" :active="request()->is('history')">
                     <x-slot name="icon">
                         <x-heroicon-s-clock class="flex-shrink-0 w-5 h-5 text-green-500" />
                     </x-slot>
                     <strong>History</strong>
                 </x-sidebar-item>
 
-                <x-sidebar-item href="{{ url('cart') }}" :active="request()->is('cart')">
+                <x-sidebar-item href="{{ url('cart') }}" :active="request()->is('certificate')">
                     <x-slot name="icon">
                         <x-heroicon-s-academic-cap class="flex-shrink-0 w-5 h-5 text-purple-500" />
                     </x-slot>
