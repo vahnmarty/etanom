@@ -19,7 +19,7 @@
   @apply w-full md:h-[50vw] h-[100vw] ;
     margin: 0 auto;
     overflow: hidden;
-    position: relative;
+    position: relative; 
   }
   
   .kenburns .kenburns-img {

@@ -4,7 +4,7 @@
         <div
             class="flex items-center justify-between px-6 py-5 mx-auto max-w-7xl sm:py-4 md:justify-start md:space-x-10 lg:px-8">
             <div>
-                <a href="#" class="flex">
+                <a href="{{ url('/') }}" class="flex">
                     <img src="{{ url('img/logo.svg') }}" class="w-auto h-6 lg:h-10" alt="">
                 </a>
             </div>
@@ -67,6 +67,8 @@
                                                         active="{{ request()->is('/') }}" />
                                                     <x-header-menu-link label="About" href="{{ url('/about') }}"
                                                         active="{{ request()->is('/about') }}" />
+                                                    <x-header-menu-link label="Milestone" href="{{ url('/milestone') }}"
+                                                        active="{{ request()->is('/milestone') }}" />
                                                     <x-header-menu-link label="Blog" href="{{ url('/blog') }}"
                                                         active="{{ request()->is('/blog') }}" />
                                                     <x-header-menu-link label="FAQ" href="{{ url('/faq') }}"
@@ -99,6 +101,8 @@
                         active="{{ request()->is('/about') }}" />
                     <x-header-menu-link label="Blog" href="{{ url('/blog') }}"
                         active="{{ request()->is('/blog') }}" />
+                    <x-header-menu-link label="Milestone" href="{{ url('/milestone') }}"
+                        active="{{ request()->is('/milestone') }}" />
                     <x-header-menu-link label="FAQ" href="{{ url('/faq') }}"
                         active="{{ request()->is('/faq') }}" />
                     <x-header-menu-link label="Login" href="{{ url('/login') }}"

@@ -1,5 +1,6 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 import preset from './vendor/filament/support/tailwind.config.preset'
+const colors = require('tailwindcss/colors')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -19,6 +20,14 @@ module.exports = {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
             },
             colors:{
+                transparent: 'transparent',
+                current: 'currentColor',
+                black: colors.black,
+                white: colors.white,
+                gray: colors.gray,
+                emerald: colors.emerald,
+                indigo: colors.indigo,
+                yellow: colors.yellow,
                 'light-green': '#BCE13C',
                 'normal-green': '#4CA444',
             }
