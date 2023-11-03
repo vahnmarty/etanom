@@ -1,6 +1,7 @@
 <?php
 
 use App\Livewire\CartPage;
+use App\Livewire\Milestone;
 use App\Http\Livewire\Calculator;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
@@ -32,6 +33,7 @@ Route::middleware('auth')->group(function () {
 
 Route::get('calculator', Calculator::class);
 Route::get('cart', CartPage::class);
+Route::get('milestone', Milestone::class);
 
 Route::get('newsletter', [NewsletterController::class, 'create'])->name('newsletter.create');
 Route::post('newsletter', [NewsletterController::class, 'store'])->name('newsletter.store');

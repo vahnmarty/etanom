@@ -14,6 +14,10 @@
   @apply inline-flex items-center justify-center px-8 py-2 text-base font-medium text-white border border-transparent rounded-full shadow-sm bg-normal-green hover:bg-normal-green/90;
 }
 
+.btn-flat{
+  @apply inline-flex items-center justify-center px-8 py-2 text-base font-medium text-white bg-gray-900 border border-transparent rounded-sm shadow-sm hover:bg-gray-700;
+}
+
 
 .kenburns {
   @apply w-full md:h-[50vw] h-[100vw] ;
