@@ -15,11 +15,17 @@
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
-            <div class="flex">
-                <aside class="min-h-screen w-96 bg-normal-green"></aside>
-                <aside class="flex-1">
-                    <h1>hello</h1>
-                </aside>
+            @include('layouts.navigation')
+
+            <div class="bg-white lg:flex">
+
+                @include('includes.sidebar')
+        
+                <div class="flex-1">
+                    <main class="px-4 py-3 lg:px-16 lg:py-6">
+                        {{ $slot }}
+                    </main>
+                </div>
             </div>
         </div>
     </body>

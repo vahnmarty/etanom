@@ -1,4 +1,4 @@
-<nav x-data="{ open: false }" class="bg-white border-b border-gray-100 dark:bg-gray-800 dark:border-gray-700">
+<nav x-data="{ open: false }" class="bg-white border-b border-gray-300 dark:bg-gray-800 dark:border-gray-700">
     <!-- Primary Navigation Menu -->
     <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
@@ -24,7 +24,7 @@
                 <x-dropdown align="right" width="48">
                     <x-slot name="trigger">
                         <button class="inline-flex items-center px-3 py-2 text-sm font-medium leading-4 text-gray-500 transition duration-150 ease-in-out bg-white border border-transparent rounded-md dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none">
-                            <x-heroicon-s-question-mark-circle class="w-6 h-6 text-purple-400"/>
+                            <x-heroicon-s-question-mark-circle class="w-6 h-6 text-green-600"/>
                         </button>
                     </x-slot>
 
@@ -36,7 +36,7 @@
                 <x-dropdown align="right" width="48">
                     <x-slot name="trigger">
                         <button class="inline-flex items-center px-3 py-2 text-sm font-medium leading-4 text-gray-500 transition duration-150 ease-in-out bg-white border border-transparent rounded-md dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none">
-                            <x-heroicon-s-bell class="w-6 h-6 text-yellow-500"/>
+                            <x-heroicon-s-bell class="w-6 h-6 text-green-600"/>
                         </button>
                     </x-slot>
 
@@ -44,6 +44,19 @@
                         <div>Notifications</div>
                     </x-slot>
                 </x-dropdown>
+
+                <div>
+                    <div class="relative">
+                        <div class="px-3 py-1 text-sm bg-green-100 border border-green-300 rounded-full">
+                            <div class="flex items-center justify-between gap-6">
+                                <x-heroicon-s-bolt class="flex-shrink-0 w-5 h-5 text-green-700"/>
+                                <span class="font-bold text-center text-green-800">20</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
                 
 
                 <x-dropdown align="right" width="48">

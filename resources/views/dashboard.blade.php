@@ -1,8 +1,6 @@
 <x-app-layout>
-
-
     <div class="py-12">
-        <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-7xl sm:px-6 lg:px-16">
 
 
             <div class="p-8 text-white bg-orange-400 shadow-sm dark:bg-gray-800 sm:rounded-lg">
