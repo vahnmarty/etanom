@@ -30,19 +30,16 @@
         </style>
 
         @livewireStyles
+        @stack('css')
     </head>
-    <body class="font-sans antialiased text-gray-900 bg-gray-50">
-        
-
-        <div class="bg-gray-100 shadow-md">
-            @include('includes.top-header')
+    <body>
+        <div class="antialiased text-gray-600">
+            {{ $slot ?? '' }}
+            @yield('content')
         </div>
         
-        {{ $slot ?? ''}}
-        @yield('content')
-
-        @include('includes.footer')
-        
         @livewireScripts
+
+        @stack('scripts')
     </body>
 </html>

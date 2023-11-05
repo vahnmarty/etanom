@@ -154,5 +154,46 @@ crossorigin=""/>
             </div>
         </div>
     </div>
+
+    <div class="min-h-screen py-32 mt-32 bg-gray-900">
+        <div class="px-8 mx-auto max-w-7xl">
+            <div class="grid justify-center grid-cols-2 gap-16 lg:grid-cols-4">
+                @foreach(range(1, 8) as $i => $grid)
+                @php 
+                    $pct = rand(0, 100); 
+                    $seedballs = rand(20000, 70000);
+                @endphp
+                <div>
+                    <div class="relative w-56 h-56 p-4 mx-auto rounded-full" style="background-color: rgba(188, 225, 60, {{ $pct/100}});">
+                        <div class="absolute flex items-center justify-center bg-gray-900 rounded-full inset-3" >
+                            <h4 class="text-5xl font-bold text-white">{{ $pct }}%</h4>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 text-lg font-bold text-center text-light-green">
+                        Bukidnon: Area {{ $i }}
+                    </div>
+                    <div class="mt-8">
+                        <div class="flex justify-between">
+                            <div class="flex gap-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="flex-shrink-0 w-4 h-4 text-light-green">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+                                  </svg>
+                                  
+                                <p class="text-xs text-gray-200">{{ number_format($seedballs) }} seedballs</p>
+                            </div>
+                        </div>
+                        <div class="relative mt-1 bg-gray-300 h-7">
+                            <div class="absolute inset-0 bg-green-700" style="width: {{ $pct }}%">
+                                <div class="absolute inset-0 bg-green-300" style="width: {{ 100 - $pct - 20}}%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
+        
+    </div>
     
 </div>

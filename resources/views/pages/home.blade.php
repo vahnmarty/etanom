@@ -12,7 +12,6 @@
 
 @section('content')
     <div class="kenburns">
-        @include('includes.header')
         <img src="{{ asset('img/hero1.png') }}" class="kenburns-img">
         <div class="absolute inset-0 top-0 z-10 bg-gray-900/40">
             <div class="flex flex-col items-center justify-center h-full text-center">
