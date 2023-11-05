@@ -37,11 +37,15 @@ class Checkout extends Component implements HasForms
 
     public function createSeedballs(Order $order)
     {
-        $seedball = new Seedball;
-        $seedball->code = Seedball::generateCode();
-        $seedball->order_id = $order->id;
-        $seedball->user_id = auth()->id();
-        $seedball->price = config('settings.seedball.price');
-        $seedball->save();
+        for($i = 0; $i < $order->amount; $i++)
+        {
+            $seedball = new Seedball;
+            $seedball->code = Seedball::generateCode();
+            $seedball->order_id = $order->id;
+            $seedball->user_id = auth()->id();
+            $seedball->price = config('settings.seedball.price');
+            $seedball->save();
+        }
+        
     }
 }

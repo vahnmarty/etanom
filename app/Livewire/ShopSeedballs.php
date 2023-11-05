@@ -44,18 +44,20 @@ class ShopSeedballs extends Component implements HasForms
                 ->numeric()
                 ->maxValue(100)
                 ->minValue(1)
-                ->afterStateUpdated(function(Get $get, Set $set, ?string $old, ?string $state){
+                ->afterStateUpdated(function(Get $get, Set $set, ?string $old, ?int $state){
                     $state = (int) $state;
-                    $set('subtotal', number_format($state * $this->price, 2));
+                    $set('subtotal', $state * $this->price, 2);
                 })
                 ->extraAttributes(['class' => 'text-center'])
                 ->helperText('1 tons is like 2,476 miles driven in an average car')
                 ->live(),
             TextInput::make('subtotal')
                 ->disabled()
-                ->dehydrated(fn ($state): string => number_format($state, 2))
+                ->numeric()
+                ->dehydrated(fn ($state) => number_format($state, 2))
                 ->live(),
             TextInput::make('coupon')
+                ->hidden()
                 ->disabled()
                 ->live(),
             Fieldset::make('Coming soon')

@@ -6,23 +6,23 @@
     </div>
     <div>
         <div class="px-8 space-y-1">
-            <a href="{{ url('dashboard') }}" class="flex w-full gap-4 px-8 py-4 text-gray-100 bg-green-700 rounded-md hover:text-white hover:bg-green-800">
+            <a href="{{ url('dashboard') }}" class="flex w-full gap-4 px-8 py-4 text-gray-100 rounded-md hover:text-white hover:bg-green-700 {{ request()->is('dashboard*') ? 'bg-green-700 hover:bg-green-800' : '' }}">
                 <x-heroicon-s-squares-2x2 class="flex-shrink-0 w-5 h-5" />
                 <strong>Home</strong>
             </a>
-            <a href="{{ url('shop/seedballs') }}" class="flex w-full gap-4 px-8 py-4 text-gray-100 rounded-md hover:text-white hover:bg-green-700">
+            <a href="{{ url('shop/seedballs') }}" class="flex w-full gap-4 px-8 py-4 text-gray-100 rounded-md hover:text-white hover:bg-green-700 {{ request()->is('shop*') ? 'bg-green-700 hover:bg-green-800' : '' }}">
                 <x-heroicon-o-shopping-cart class="flex-shrink-0 w-5 h-5" />
                 <strong>Purchase</strong>
             </a>
-            <a href="{{ url('inventory') }}" class="flex w-full gap-4 px-8 py-4 text-gray-100 rounded-md hover:text-white hover:bg-green-700">
+            <a href="{{ url('inventory') }}" class="flex w-full gap-4 px-8 py-4 text-gray-100 rounded-md hover:text-white hover:bg-green-700 {{ request()->is('inventory*') ? 'bg-green-700 hover:bg-green-800' : '' }}">
                 <x-heroicon-o-cube class="flex-shrink-0 w-5 h-5" />
                 <strong>Inventory</strong>
             </a>
-            <a href="{{ url('dashboard') }}" class="flex w-full gap-4 px-8 py-4 text-gray-100 rounded-md hover:text-white hover:bg-green-700">
+            <a href="{{ url('gifts') }}" class="flex w-full gap-4 px-8 py-4 text-gray-100 rounded-md hover:text-white hover:bg-green-700 {{ request()->is('gifts*') ? 'bg-green-700 hover:bg-green-800' : '' }}">
                 <x-heroicon-o-gift class="flex-shrink-0 w-5 h-5" />
                 <strong>Gifts</strong>
             </a>
-            <a href="{{ url('dashboard') }}" class="flex w-full gap-4 px-8 py-4 text-gray-100 rounded-md hover:text-white hover:bg-green-700">
+            <a href="{{ url('certificates') }}" class="flex w-full gap-4 px-8 py-4 text-gray-100 rounded-md hover:text-white hover:bg-green-700 {{ request()->is('certificates*') ? 'bg-green-700 hover:bg-green-800' : '' }}">
                 <x-heroicon-o-academic-cap class="flex-shrink-0 w-5 h-5" />
                 <strong>Certificates</strong>
             </a>
