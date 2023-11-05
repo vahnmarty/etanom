@@ -29,18 +29,19 @@
     </head>
  
     <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
+        <div class="min-h-screen bg-white dark:bg-gray-900">
             <div class="flex">
                 @include('includes.sidebar')
                 <aside class="flex-1">
                     @include('includes.app-header')
-                    @yield('content') {{ $slot ?? '' }}
+                    <main>
+                        @yield('content') {{ $slot ?? '' }}
+                    </main>
                 </aside>
             </div>
         </div>
 
         @filamentScripts
-        @vite('resources/js/app.js')
     </body>
 
 </html>

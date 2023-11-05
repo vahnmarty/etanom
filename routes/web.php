@@ -1,10 +1,15 @@
 <?php
 
 use App\Livewire\CartPage;
+use App\Livewire\Checkout;
+use App\Livewire\ShopPage;
+use App\Livewire\Inventory;
 use App\Livewire\Milestone;
+use App\Livewire\ShopSeedballs;
 use App\Http\Livewire\Calculator;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
+use App\Filament\Pages\PurchaseSeedballs;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\NewsletterController;
 
@@ -34,6 +39,14 @@ Route::middleware('auth')->group(function () {
 Route::get('calculator', Calculator::class);
 Route::get('cart', CartPage::class);
 Route::get('milestone', Milestone::class);
+
+Route::group(['middleware' => 'auth'], function(){
+    Route::get('shop', ShopPage::class)->name('shop.index');
+    Route::get('shop/seedballs', ShopSeedballs::class)->name('shop.seedballs');
+    Route::get('order/{code}/checkout', Checkout::class)->name('order.checkout');
+    Route::get('inventory', Inventory::class)->name('inventory.index');
+});
+
 
 Route::get('newsletter', [NewsletterController::class, 'create'])->name('newsletter.create');
 Route::post('newsletter', [NewsletterController::class, 'store'])->name('newsletter.store');

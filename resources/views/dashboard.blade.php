@@ -43,10 +43,10 @@
                 </div>
             </section>
 
-            <div class="flex items-center mt-12 bg-gray-100">
+            <div class="flex items-center mt-12 bg-white">
                 <div class="flex-1 border-t-2 border-light-green"></div>
                 <div class="flex items-center justify-center w-40 mx-auto">
-                    <x-heroicon-o-cloud class="block w-24 h-24 bg-gray-100 text-normal-green"/>
+                    <x-heroicon-o-cloud class="block w-24 h-24 bg-white text-normal-green"/>
                 </div>
                 <div class="flex-1 border-t-2 border-light-green"></div>
             </div>

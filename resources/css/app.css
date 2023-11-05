@@ -19,8 +19,9 @@
 }
 
 .btn-box-primary{
-  @apply inline-flex items-center justify-center gap-2 px-8 py-2 text-sm text-white border border-transparent rounded-sm shadow-sm bg-normal-green hover:bg-gray-700;
+  @apply inline-flex items-center justify-center gap-2 px-8 py-2 text-sm text-white border border-transparent rounded-sm shadow-sm bg-normal-green hover:bg-normal-green/90;
 }
+
 
 
 .kenburns {

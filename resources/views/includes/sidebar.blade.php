@@ -10,11 +10,11 @@
                 <x-heroicon-s-squares-2x2 class="flex-shrink-0 w-5 h-5" />
                 <strong>Home</strong>
             </a>
-            <a href="{{ url('dashboard') }}" class="flex w-full gap-4 px-8 py-4 text-gray-100 rounded-md hover:text-white hover:bg-green-700">
+            <a href="{{ url('shop/seedballs') }}" class="flex w-full gap-4 px-8 py-4 text-gray-100 rounded-md hover:text-white hover:bg-green-700">
                 <x-heroicon-o-shopping-cart class="flex-shrink-0 w-5 h-5" />
                 <strong>Purchase</strong>
             </a>
-            <a href="{{ url('dashboard') }}" class="flex w-full gap-4 px-8 py-4 text-gray-100 rounded-md hover:text-white hover:bg-green-700">
+            <a href="{{ url('inventory') }}" class="flex w-full gap-4 px-8 py-4 text-gray-100 rounded-md hover:text-white hover:bg-green-700">
                 <x-heroicon-o-cube class="flex-shrink-0 w-5 h-5" />
                 <strong>Inventory</strong>
             </a>
