@@ -41,4 +41,14 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function seedballs()
+    {
+        return $this->hasMany(Seedball::class);
+    }
+
+    public function seedballCredits()
+    {
+        return $this->seedballs()->whereNull('date_planted')->count();
+    }
 }
