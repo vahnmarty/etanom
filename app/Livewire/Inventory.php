@@ -23,7 +23,7 @@ class Inventory extends Component implements HasForms, HasTable
     public function table(Table $table): Table
     {
         return $table
-            ->query(Seedball::query())
+            ->query(Seedball::latest())
             ->columns([
                 TextColumn::make('short_code')
                     ->label('Code')

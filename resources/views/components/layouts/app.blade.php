@@ -26,6 +26,7 @@
  
         @filamentStyles
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+        @stack('head-scripts')
     </head>
  
     <body class="font-sans antialiased">
@@ -42,6 +43,7 @@
         </div>
 
         @filamentScripts
+        @stack('after-scripts')
     </body>
 
 </html>
