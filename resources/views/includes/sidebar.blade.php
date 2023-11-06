@@ -1,7 +1,7 @@
-<aside class="min-h-screen w-80 bg-normal-green">
-    <div class="px-8 py-6">
+<aside class="w-0 min-h-screen overflow-hidden transition-all ease-in-out md:w-80 bg-normal-green">
+    <div class="px-8 py-8">
         <a href="">
-            <img src="{{ asset('img/icon-white.png') }}" class="w-10 h-10">
+            <img src="{{ asset('img/logo-white.png') }}" class="w-full h-9">
         </a>
     </div>
     <div>
