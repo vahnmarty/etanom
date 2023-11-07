@@ -4,8 +4,9 @@ namespace App\Http\Controllers\Api;
 
 use Str;
 use Http;
-use App\Http\Controllers\Controller;
+use App\Models\Order;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class PaypalController extends Controller
 {
@@ -49,6 +50,8 @@ class PaypalController extends Controller
 
     public function createOrder($code)
     {
+        $order = Order::whereCode($code)->firstOrFail();
+        
         $access_token = $this->getAccessToken();
 
         $return_url = route('inventory.index');
@@ -69,7 +72,7 @@ class PaypalController extends Controller
                     'reference_id' => 'd9f80740-38f0-11e8-b467-0ed5f89f718b',
                     'amount' => [
                         'currency_code' => 'USD',
-                        'value' => '100.00',
+                        'value' => $order->amount,
                     ],
                 ],
             ],
@@ -77,7 +80,7 @@ class PaypalController extends Controller
                 'paypal' => [
                     'experience_context' => [
                         "payment_method_preference" => "IMMEDIATE_PAYMENT_REQUIRED",
-                        "brand_name" => "EXAMPLE INC",
+                        "brand_name" => "ETANOM",
                         "locale" => "en-US",
                         "landing_page" => "LOGIN",
                         "shipping_preference" => "NO_SHIPPING",

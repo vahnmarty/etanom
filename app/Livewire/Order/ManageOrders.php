@@ -49,6 +49,7 @@ class ManageOrders extends Component implements HasForms, HasTable
             ])
             ->actions([
                 Action::make('view')
+                    ->url(fn(Order $record) => route('orders.checkout-successful', $record->code))
                     ->visible(fn(Order $record) => $record->isPaid()),
                 Action::make('checkout')
                     ->url(fn(Order $record) => route('orders.checkout', $record->code))

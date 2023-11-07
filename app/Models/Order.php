@@ -23,4 +23,9 @@ class Order extends Model
     {
         return !empty($this->paid_at);
     }
+
+    public function seedballs()
+    {
+        return $this->hasMany(Seedball::class);
+    }
 }
