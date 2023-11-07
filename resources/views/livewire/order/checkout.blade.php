@@ -1,4 +1,6 @@
-@push('head-scripts')
+<div class="py-12">
+
+    @push('head-scripts')
 <script
       src="https://www.paypal.com/sdk/js?components=buttons,card-fields&client-id={{ config('services.paypal.client_id') }}"></script>
 @endpush
@@ -111,18 +113,23 @@
 </script>
 @endpush
 
-<div class="py-12">
     <div class="sm:px-6 lg:px-16">
 
         <h1 class="text-3xl font-bold">
             Checkout
         </h1>
 
-        <div id="paypal-button-container" class="mt-8 paypal-button-container"></div>
-        <p class="my-8">OR</p>
-        <div class="grid grid-cols-4">
+        
+        <div class="grid grid-cols-4 gap-8">
 
             <div class="col-span-2">
+                <div id="paypal-button-container" class="mt-8 paypal-button-container"></div>
+                <div class="flex items-center justify-between gap-3 py-5">
+                    <div class="w-full border-t border-gray-300"></div>
+                    <div>OR</div>
+                    <div class="w-full border-t border-gray-300"></div>
+                </div>
+
                 <div id="checkout-form">
                     <div id="card-name-field-container"></div>
                     <div id="card-number-field-container"></div>
@@ -130,9 +137,51 @@
                     <div id="card-cvv-field-container"></div>
          
                     <button id="card-field-submit-button" class="inline-flex items-center justify-center w-full gap-2 px-8 py-3 text-lg text-white border border-transparent rounded-md shadow-md bg-normal-green hover:bg-normal-green/90" type="button">
-                        Pay using Card
+                        Place Order
                     </button>
                  </div>
+            </div>
+
+            <div class="col-span-2">
+
+                <div class="p-8 border border-gray-300">
+                    <h4 class="font-bold">Shopping Cart</h4>
+
+                    <div class="mt-6">
+                        <div class="flex justify-between">
+                            <p>Subtotal</p>
+                            <p>{{ number_format($order->subtotal, 2) }}</p>
+                        </div>
+                        <div class="flex justify-between">
+                            <p>Tax</p>
+                            <p>{{ number_format(0, 2) }}</p>
+                        </div>
+                        <div class="flex justify-between">
+                            <p class="font-bold">Total</p>
+                            <p class="font-bold">{{ number_format($order->total, 2) }}</p>
+                        </div>
+                    </div>
+
+                    <div class="pt-3 mt-8 border-t">
+                        <table class="w-full min-w-full divide-y divide-gray-300">
+                            <thead>
+                              <tr>
+                                <th scope="col" width="50%" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Item</th>
+                                <th scope="col" width="25%" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Qty</th>
+                                <th scope="col" width="25%" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Price</th>
+                              </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200">
+                              <tr>
+                                <td class="px-3 py-4 text-sm text-gray-500 whitespace-nowrap">Seedballs</td>
+                                <td class="px-3 py-4 text-sm text-gray-500 whitespace-nowrap">{{ $order->amount }}</td>
+                                <td class="px-3 py-4 text-sm text-gray-500 whitespace-nowrap">{{ number_format($order->total, 2) }}</td>
+                              </tr>
+                            </tbody>
+                        </table>
+                          
+                    </div>
+                </div>
             </div>
         </div>
     
