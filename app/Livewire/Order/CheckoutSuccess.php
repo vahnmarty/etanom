@@ -33,6 +33,7 @@ class CheckoutSuccess extends Component implements HasForms, HasTable
     public function table(Table $table): Table
     {
         return $table
+            ->paginated(false)
             ->query(Seedball::where('order_id', $this->order->id))
             ->columns([
                 TextColumn::make('code'),
