@@ -1,12 +1,13 @@
 <?php
 
 use App\Livewire\CartPage;
-use App\Livewire\Checkout;
+use App\Livewire\Order\Checkout;
 use App\Livewire\ShopPage;
 use App\Livewire\Inventory;
 use App\Livewire\Milestone;
 use App\Livewire\ShopSeedballs;
 use App\Http\Livewire\Calculator;
+use App\Livewire\Order\ManageOrders;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 use App\Filament\Pages\PurchaseSeedballs;
@@ -43,7 +44,8 @@ Route::get('milestone', Milestone::class);
 Route::group(['middleware' => 'auth'], function(){
     Route::get('shop', ShopPage::class)->name('shop.index');
     Route::get('shop/seedballs', ShopSeedballs::class)->name('shop.seedballs');
-    Route::get('order/{code}/checkout', Checkout::class)->name('order.checkout');
+    Route::get('orders/{code}/checkout', Checkout::class)->name('orders.checkout');
+    Route::get('orders', ManageOrders::class)->name('orders.index');
     Route::get('inventory', Inventory::class)->name('inventory.index');
 });
 

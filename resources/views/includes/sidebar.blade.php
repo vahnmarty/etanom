@@ -14,6 +14,10 @@
                 <x-heroicon-o-shopping-cart class="flex-shrink-0 w-5 h-5" />
                 <strong>Purchase</strong>
             </a>
+            <a href="{{ url('orders') }}" class="flex w-full gap-4 px-8 py-4 text-gray-100 rounded-md hover:text-white hover:bg-green-700 {{ request()->is('orders*') ? 'bg-green-700 hover:bg-green-800' : '' }}">
+                <x-heroicon-o-chart-bar-square class="flex-shrink-0 w-5 h-5" />
+                <strong>Orders</strong>
+            </a>
             <a href="{{ url('inventory') }}" class="flex w-full gap-4 px-8 py-4 text-gray-100 rounded-md hover:text-white hover:bg-green-700 {{ request()->is('inventory*') ? 'bg-green-700 hover:bg-green-800' : '' }}">
                 <x-heroicon-o-cube class="flex-shrink-0 w-5 h-5" />
                 <strong>Inventory</strong>

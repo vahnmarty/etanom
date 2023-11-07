@@ -118,24 +118,23 @@
             Checkout
         </h1>
 
-        <div id="paypal-button-container" class="paypal-button-container"></div>
-          <div id="checkout-form">
-           <div id="card-name-field-container"></div>
-           <div id="card-number-field-container"></div>
-           <div id="card-expiry-field-container"></div>
-           <div id="card-cvv-field-container"></div>
-           <button id="card-field-submit-button" type="button">Pay now with Card Fields</button>
-          </div>
-    
+        <div id="paypal-button-container" class="mt-8 paypal-button-container"></div>
+        <p class="my-8">OR</p>
+        <div class="grid grid-cols-4">
 
-        <div class="max-w-lg py-16">
-            <form wire:submit.prevent="checkout">
-                {{ $this->form }}
-
-                <div class="mt-8">
-                    <button type="submit" class="inline-flex items-center justify-center w-full gap-2 px-8 py-3 text-lg text-white border border-transparent rounded-md shadow-md bg-normal-green hover:bg-normal-green/90 ">Checkout</button>
-                </div>
-            </form>
+            <div class="col-span-2">
+                <div id="checkout-form">
+                    <div id="card-name-field-container"></div>
+                    <div id="card-number-field-container"></div>
+                    <div id="card-expiry-field-container"></div>
+                    <div id="card-cvv-field-container"></div>
+         
+                    <button id="card-field-submit-button" class="inline-flex items-center justify-center w-full gap-2 px-8 py-3 text-lg text-white border border-transparent rounded-md shadow-md bg-normal-green hover:bg-normal-green/90" type="button">
+                        Pay using Card
+                    </button>
+                 </div>
+            </div>
         </div>
+    
     </div>
 </div>

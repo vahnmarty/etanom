@@ -78,7 +78,7 @@ class ShopSeedballs extends Component implements HasForms
 
         $order = $this->createOrder($data);
 
-        return redirect()->route('order.checkout', $order->code);
+        return redirect()->route('orders.checkout', $order->code);
     }
 
     public function createOrder(array $data)

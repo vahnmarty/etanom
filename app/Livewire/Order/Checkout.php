@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire;
+namespace App\Livewire\Order;
 
 use App\Models\Order;
 use Livewire\Component;
@@ -16,7 +16,7 @@ class Checkout extends Component implements HasForms
 
     public function render()
     {
-        return view('livewire.checkout');
+        return view('livewire.order.checkout');
     }
 
     public function mount($code)

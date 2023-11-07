@@ -18,4 +18,9 @@ class Order extends Model
         $identifier = $a . $b . $c;
         return strtoupper($identifier);
     }
+
+    public function isPaid()
+    {
+        return !empty($this->paid_at);
+    }
 }
