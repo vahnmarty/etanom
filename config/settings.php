@@ -3,7 +3,7 @@
 return [
 
     'seedball' => [
-        'price' => 50
+        'price' => 1
     ],
 
 

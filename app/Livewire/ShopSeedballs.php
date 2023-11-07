@@ -49,11 +49,13 @@ class ShopSeedballs extends Component implements HasForms
                     $set('subtotal', $state * $this->price, 2);
                 })
                 ->extraAttributes(['class' => 'text-center'])
-                ->helperText('1 tons is like 2,476 miles driven in an average car')
+                ->helperText('1 seedball = $1.00')
                 ->live(),
             TextInput::make('subtotal')
+                ->prefix('$')
                 ->disabled()
                 ->numeric()
+                ->inputMode('decimal')
                 ->dehydrated(fn ($state) => number_format($state, 2))
                 ->live(),
             TextInput::make('coupon')
