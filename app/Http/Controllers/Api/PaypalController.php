@@ -55,7 +55,7 @@ class PaypalController extends Controller
         $access_token = $this->getAccessToken();
 
         $return_url = route('inventory.index');
-        $cancel_url = route('order.checkout', $code);
+        $cancel_url = route('orders.checkout', $code);
 
         $url = 'https://api-m.sandbox.paypal.com/v2/checkout/orders';
 
