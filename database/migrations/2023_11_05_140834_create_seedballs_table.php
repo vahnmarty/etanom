@@ -19,6 +19,9 @@ return new class extends Migration
             $table->string('tree_type')->nullable();
             $table->string('location')->nullable();
             $table->float('price')->nullable();
+            $table->integer('quantity');
+            $table->float('total')->nullable();
+            $table->string('status')->nullable();
             $table->date('date_planted')->nullable();
             $table->timestamps();
         });
