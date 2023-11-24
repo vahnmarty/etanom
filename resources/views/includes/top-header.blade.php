@@ -1,9 +1,9 @@
 <div class="relative z-20">
         <div
-            class="flex items-center justify-between px-6 py-5 mx-auto max-w-7xl sm:py-4 md:justify-start md:space-x-10 lg:px-8">
+            class="flex items-center justify-between max-w-5xl px-6 py-5 mx-auto sm:py-8 md:justify-start md:space-x-10 lg:px-8">
             <div>
-                <a href="#" class="flex">
-                    <img src="{{ url('img/logo.svg') }}" class="w-auto h-6 lg:h-10" alt="">
+                <a href="{{ url('/') }}" class="flex">
+                    <img src="{{ url('img/logo-green.png') }}" class="w-auto h-6 lg:h-10" alt="">
                 </a>
             </div>
             <div class="-my-2 -mr-2 md:hidden">
@@ -92,7 +92,6 @@
 
                 </nav>
                 <div class="flex items-center text-gray-900 md:ml-12 lg:gap-12">
-                    <x-header-menu-link label="Home" href="{{ url('/') }}" active="{{ request()->is('/') }}" />
                     <x-header-menu-link label="About" href="{{ url('/about') }}"
                         active="{{ request()->is('/about') }}" />
                     <x-header-menu-link label="Blog" href="{{ url('/blog') }}"

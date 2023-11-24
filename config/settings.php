@@ -3,7 +3,9 @@
 return [
 
     'seedball' => [
-        'price' => 1
+        'currency' => 'PHP',
+        'symbol' => '₱',
+        'price' => 100
     ],
 
 

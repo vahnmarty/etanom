@@ -33,7 +33,7 @@
         @stack('css')
     </head>
     <body class="font-sans antialiased text-gray-900">
-        <div class="bg-gray-100 shadow-md">
+        <div>
             @include('includes.top-header')
         </div>
         

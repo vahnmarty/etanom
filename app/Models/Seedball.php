@@ -12,6 +12,16 @@ class Seedball extends Model
 
     protected $appends = ['short_code'];
 
+    public static function price()
+    {
+        return config('settings.seedball.price');
+    }
+
+    public static function displayPrice()
+    {
+        return config('settings.seedball.symbol') . number_format( config('settings.seedball.price'), 2);
+    }
+
     public static function generateCode()
     {
         $a = date('Ymd');

@@ -7,6 +7,7 @@ use App\Models\Order;
 use Filament\Forms\Get;
 use Filament\Forms\Set;
 use Livewire\Component;
+use App\Models\Seedball;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Contracts\HasForms;
 use Filament\Forms\Components\Fieldset;
@@ -49,10 +50,10 @@ class ShopSeedballs extends Component implements HasForms
                     $set('subtotal', $state * $this->price, 2);
                 })
                 ->extraAttributes(['class' => 'text-center'])
-                ->helperText('1 seedball = $1.00')
+                ->helperText('1 seedball = ' . Seedball::displayPrice())
                 ->live(),
             TextInput::make('subtotal')
-                ->prefix('$')
+                ->prefix(config('settings.seedball.symbol'))
                 ->disabled()
                 ->numeric()
                 ->inputMode('decimal')
