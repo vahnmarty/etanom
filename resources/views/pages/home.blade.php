@@ -68,7 +68,7 @@
         </div>
     </section>
 
-    <section class="min-h-screen bg-white">
+    <section class="bg-white">
         <img src="{{ asset('img/mario.gif') }}" alt="" class="w-full h-auto">
     </section>
 </div>
