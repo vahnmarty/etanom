@@ -12,9 +12,9 @@
                     <h6 class="font-bold text-light-green">Explore</h6>
 
                     <div class="mt-4 space-y-2">
-                        <a href="" class="block text-xs lg:text-base">About Us</a>
-                        <a href="" class="block text-xs lg:text-base">FAQ</a>
-                        <a href="" class="block text-xs lg:text-base">Contact Us</a>
+                        <a href="{{ url('about') }}" class="block text-xs lg:text-base">About Us</a>
+                        <a href="{{ url('faq') }}" class="block text-xs lg:text-base">FAQ</a>
+                        <a href="{{ url('contact') }}" class="block text-xs lg:text-base">Contact Us</a>
                     </div>
                 </div>
 
@@ -32,6 +32,11 @@
                             </button>
                         </div>
                     </form>
+
+                    <div class="flex justify-between mt-7">
+                        <a href="{{ url('terms') }}" class="block text-xs">Terms & Conditions</a>
+                        <a href="{{ url('privacy') }}" class="block text-xs">Privacy Policy</a>
+                    </div>
                 </div>
             </div>
         </div>

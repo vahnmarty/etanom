@@ -6,7 +6,7 @@ use Livewire\Component;
 
 class SetupProfile extends Component
 {
-    public $step = 1;
+    public $step = 2;
 
     public function render()
     {

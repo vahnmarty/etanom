@@ -4,8 +4,58 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "737d38e63c77cfd88663460360aec25b",
+    "content-hash": "c2ed9bcb3f94db56e51536f1882dd6e0",
     "packages": [
+        {
+            "name": "adyen/php-api-library",
+            "version": "v16.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Adyen/adyen-php-api-library.git",
+                "reference": "0a6d6d1a926e1b66ff3267f40a4d61fd783baec0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Adyen/adyen-php-api-library/zipball/0a6d6d1a926e1b66ff3267f40a4d61fd783baec0",
+                "reference": "0a6d6d1a926e1b66ff3267f40a4d61fd783baec0",
+                "shasum": ""
+            },
+            "require": {
+                "ext-ctype": "*",
+                "ext-curl": "*",
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "ext-openssl": "*",
+                "php": ">=7.3"
+            },
+            "require-dev": {
+                "dms/phpunit-arraysubset-asserts": "0.5.0",
+                "friendsofphp/php-cs-fixer": "*",
+                "php-coveralls/php-coveralls": "2.6.0",
+                "phpunit/phpunit": "9.6.13",
+                "squizlabs/php_codesniffer": "3.7.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Adyen\\": "src/Adyen/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A PHP client library for accessing Adyen APIs",
+            "homepage": "https://github.com/Adyen/adyen-php-api-library",
+            "keywords": [
+                "adyen"
+            ],
+            "support": {
+                "issues": "https://github.com/Adyen/adyen-php-api-library/issues",
+                "source": "https://github.com/Adyen/adyen-php-api-library/tree/v16.1.0"
+            },
+            "time": "2023-11-27T15:55:26+00:00"
+        },
         {
             "name": "aws/aws-crt-php",
             "version": "v1.2.2",

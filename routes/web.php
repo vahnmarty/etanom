@@ -28,6 +28,8 @@ use App\Http\Controllers\NewsletterController;
 */
 
 Route::get('/', [PageController::class, 'home'])->name('page.home');
+Route::get('/terms', [PageController::class, 'terms'])->name('page.terms');
+Route::get('/privacy', [PageController::class, 'privacy'])->name('page.privacy');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
