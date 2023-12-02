@@ -16,42 +16,31 @@
         <h1 class="mt-16 text-4xl font-bold text-center lg:text-4xl md:text-left">Terms and Conditions</h1>
         
         <div class="min-h-screen py-16">
-            
-            <h3 class="mt-8 font-bold">1. Introduction</h3>
-            <p>Welcome to eTanom, the reforestation platform provided by Sikai Inc. By using our services, you agree to comply with and be bound by the following terms and conditions.</p>
+        
 
-            <h3 class="mt-8 font-bold">2. Description of Services</h3>
-            <p>eTanom offers a reforestation platform where users can purchase seedballs to contribute to tree planting. We employ a drone reforestation approach, and users can monitor their contributions through the eTanom dashboard.</p>
+            <h3 class="mt-8 font-bold">1. General Terms</h3>
+            <p>eTanom, provided by Sikai Inc, offers a reforestation platform where users can purchase seedballs to contribute to tree planting. We employ a drone reforestation approach, and users can monitor their contributions through the eTanom dashboard.</p>
 
-            <h3 class="mt-8 font-bold">3. User Accounts</h3>
-            <p>Users are required to register an account to access certain features of the platform. The information collected during registration includes name and email. User accounts may be terminated by eTanom under certain circumstances, as outlined in Section 9.</p>
+            <h3 class="mt-8 font-bold">2. Payments</h3>
+            <p>Payments for seedballs are processed instantly as an e-commerce transaction. Users can buy seedballs at any time. We may involve third parties in providing certain services. The legal entity responsible for payment processing is Sikai Inc. These transactions are governed by the laws of the Philippines.</p>
 
-            <h3 class="mt-8 font-bold">4. Payments and Cancellation</h3>
-            <p>Payments for seedballs are processed as an e-commerce transaction. Users can buy seedballs at any time. Cancellations are accepted up to 30 days before the scheduled tree planting date. Refunds are not provided.</p>
+            <h3 class="mt-8 font-bold">3. Privacy Policy</h3>
+            <p><strong>Data Storage:</strong> We collect user information during registration, including name and email, for account management and communication purposes.</p>
+            <p><strong>Data Sharing:</strong> We do not share user information with third parties except as required by law or with explicit user consent. We do not sell or trade user data.</p>
+            <p><strong>Cookie Policy:</strong> eTanom may use cookies to enhance user experience. Users can modify their browser settings to disable cookies, but this may affect the functionality of the platform.</p>
 
-            <h3 class="mt-8 font-bold">5. Third Parties</h3>
-            <p>eTanom may involve third parties in providing certain services. These third parties will be disclosed as necessary, and their use of your information will be governed by their privacy policies.</p>
+            <h3 class="mt-8 font-bold">4. Delivery Information</h3>
+            <p><strong>Delivery Time:</strong> The delivery time for seedballs varies and will be communicated during the purchasing process.</p>
+            <p><strong>Delivery Countries:</strong> We deliver our products internationally.</p>
 
-            <h3 class="mt-8 font-bold">6. User Responsibilities</h3>
-            <p>Users are responsible for the accuracy of the information provided during registration. Users must comply with acceptable conduct guidelines outlined in Section 7.</p>
+            <h3 class="mt-8 font-bold">5. Refund and Cancellation Policy</h3>
+            <p><strong>Refund Policy:</strong> Refunds are not provided. Cancellations are accepted up to 30 days before the scheduled tree planting date.</p>
+            <p><strong>Return Process:</strong> Users can cancel their order by contacting us at hello@etanom.com. The cancellation process will be communicated upon request.</p>
 
-            <h3 class="mt-8 font-bold">7. Governing Law</h3>
-            <p>These terms and conditions are governed by the laws of the Philippines.</p>
-
-            <h3 class="mt-8 font-bold">8. Legal Entity for Payment Processing</h3>
-            <p>The legal entity responsible for payment processing is Sikai Inc.</p>
-
-            <h3 class="mt-8 font-bold">9. Termination of Accounts/Services</h3>
-            <p>eTanom reserves the right to terminate user accounts or services under certain conditions, including violation of terms.</p>
-
-            <h3 class="mt-8 font-bold">10. Changes to Terms and Conditions</h3>
-            <p>Users will be informed of changes to terms and conditions through platform notifications.</p>
-
-            <h3 class="mt-8 font-bold">11. Disclaimer of Liability</h3>
-            <p>eTanom limits its liability as outlined in a separate disclaimer document.</p>
-
-            <h3 class="mt-8 font-bold">12. Dispute Resolution</h3>
-            <p>Disputes will be resolved according to the dispute resolution process outlined in a separate document.</p>
+            <h3 class="mt-8 font-bold">6. Contact Information</h3>
+            <p><strong>Legal Entity Name:</strong> Sikai Inc</p>
+            <p><strong>Email Address:</strong> hello@etanom.com</p>
+            <p><strong>Phone Number:</strong> +639171073440</p>
 
 
             
