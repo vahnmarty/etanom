@@ -25,7 +25,7 @@
         </style>
  
         @filamentStyles
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+        @vite('resources/css/app.css')
         @stack('head-scripts')
     </head>
  
@@ -43,6 +43,7 @@
         </div>
 
         @filamentScripts
+        @vite('resources/js/app.js')
         @stack('after-scripts')
     </body>
 

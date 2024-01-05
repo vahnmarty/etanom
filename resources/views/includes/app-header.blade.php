@@ -2,9 +2,9 @@
     <div class="flex justify-between">
         <div class="flex items-center gap-6">
             <div class="relative flex items-center gap-4 px-2 py-1 bg-gray-200 rounded-sm">
-                <div class="flex items-center gap-4 px-3">
+                <div x-data class="flex items-center gap-4 px-3">
                     <x-heroicon-s-bolt class="flex-shrink-0 w-7 h-7 text-normal-green" />
-                    <p class="w-8 text-xl">{{ Auth::user()->seedballCredits() }}</p>
+                    <p class="w-8 text-xl" x-on:click="alert()">{{ Auth::user()->seedballCredits() }}</p>
                 </div>
                 <a href="{{ url('shop/seedballs') }}" class="p-1 text-sm text-white border border-transparent rounded-sm shadow-sm bg-normal-green hover:bg-gray-700">
                     <x-heroicon-s-plus-small class="w-7 h-7"/>

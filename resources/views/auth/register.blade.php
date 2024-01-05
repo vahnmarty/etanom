@@ -7,8 +7,8 @@
     </x-slot>
 
     <div class="text-center">
-        <h1 class="text-3xl font-bold text-primary">Create your account</h1>
-        <p class="mt-2 text-gray-600">It's free and easy</p>
+        <h1 class="mb-3 text-lg font-bold md:text-3xl text-primary sm:mb-0">Create your account</h1>
+        <p class="hidden mt-2 text-gray-600 md:block">It's free and easy</p>
     </div>
 
 
@@ -20,23 +20,23 @@
         @csrf
 
         <div>
-            <x-label for="name" value="{{ __('Your Name') }}" />
-            <x-input id="name" class="block w-full mt-1" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
+            <x-label for="name" value="{{ __('Your Name') }}" class="hidden sm:block"/>
+            <x-input id="name" class="block w-full mt-1" type="text" name="name" placeholder="Your Name" :value="old('name')" required autofocus autocomplete="name" />
         </div>
 
         <div class="mt-4">
-            <x-label for="email" value="{{ __('Email') }}" />
-            <x-input id="email" x-model="email" class="block w-full mt-1" type="email" name="email" :value="old('email')" required autocomplete="username" />
+            <x-label for="email" value="{{ __('Email') }}"  class="hidden sm:block" />
+            <x-input id="email" x-model="email" class="block w-full mt-1" type="email" name="email" placeholder="Email Address" :value="old('email')" required autocomplete="username" />
         </div>
 
         <div class="mt-4">
-            <x-label for="password" value="{{ __('Password') }}" />
-            <x-input id="password" class="block w-full mt-1" type="password" name="password" required autocomplete="new-password" />
+            <x-label for="password" value="{{ __('Password') }}"  class="hidden sm:block" />
+            <x-input id="password" class="block w-full mt-1" type="password" name="password" placeholder="Password"  required autocomplete="new-password" />
         </div>
 
         <div class="mt-4">
-            <x-label for="password_confirmation" value="{{ __('Confirm Password') }}" />
-            <x-input id="password_confirmation" class="block w-full mt-1" type="password" name="password_confirmation" required autocomplete="new-password" />
+            <x-label for="password_confirmation" value="{{ __('Confirm Password') }}"  class="hidden sm:block" />
+            <x-input id="password_confirmation" class="block w-full mt-1" type="password"  placeholder="Confirm Password" name="password_confirmation" required autocomplete="new-password" />
         </div>
 
         <div class="mt-4">
@@ -44,7 +44,7 @@
                 <x-checkbox name="terms" class="-mb-1" id="terms" required />
 
                 <div class="ml-2 text-sm ">
-                    {!! __('By creating an account means you agree to the<br> :terms_of_service and our :privacy_policy', [
+                    {!! __('By creating an account means you agree to the :terms_of_service and our :privacy_policy', [
                             'terms_of_service' => '<a target="_blank" href="'.url('terms.show').'" class="text-sm font-bold text-gray-900 underline rounded-md hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">'.__('Terms of Service').'</a>',
                             'privacy_policy' => '<a target="_blank" href="'.url('policy.show').'" class="text-sm font-bold text-gray-900 underline rounded-md hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">'.__('Privacy Policy').'</a>',
                     ]) !!}

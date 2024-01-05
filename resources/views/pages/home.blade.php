@@ -11,14 +11,14 @@
 @endsection
 
 @section('content')
-<div>
-    <section class="max-w-5xl px-8 py-16 mx-auto lg:py-24">
+<div class="bg-gray-100">
+    <section class="max-w-5xl px-8 py-8 mx-auto lg:py-10">
 
         <div class="grid items-center gap-8 md:grid-cols-2">
             <div>
                 <h1 class="text-4xl font-bold text-center lg:text-4xl md:text-left">Easy access to reforestation.</h1>
                 <p class="mt-8 text-xl text-center md:text-left">
-                    We do the tree-planting for you using our drone reforestation approach. 
+                    We do the tree-planting for you.
                 </p>
 
                 <div class="text-center md:text-left">
@@ -36,7 +36,36 @@
         </div>
         
     </section>
-    <section class="bg-gray-200">
+    <section class="bg-white">
+        <div class="max-w-5xl px-8 py-16 mx-auto lg:py-24">
+            <div class="grid gap-4 sm:grid-cols-4">
+
+                @foreach(range(1, 6) as $tree)
+                <div class="bg-gray-100 border border-gray-200 rounded-lg shadow-sm p-0.5">
+                    <div class="py-3">
+                        <img src="{{ asset('img/seed.png') }}" class="w-24 h-24 mx-auto" alt="">
+                    </div>
+                    <div class="flex justify-between px-2 py-2 bg-white">
+                        <div>
+                            <h5 class="text-sm font-bold text-normal-green">Tree {{ $tree }}</h5>
+                            <p class="text-sm">{{ config('settings.seedball.symbol') }} {{ mt_rand(20,50) }}-{{ mt_rand(51, 200) }}</p>
+                            <div class="flex hidden gap-1 text-xs">
+                                <x-heroicon-o-circle-stack class="w-4 h-4 text-gray-500"/>
+                                <span>10K+</span>
+                            </div>
+                        </div>
+                        <div class="self-center">
+                            <div class="p-1 rounded-full bg-normal-green hover:bg-light-green">
+                                <x-heroicon-o-shopping-cart class="w-5 h-5 text-white"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+    <section class="hidden bg-gray-200">
         <div class="max-w-5xl px-8 py-16 mx-auto lg:py-24">
             <div class="grid gap-8 sm:grid-cols-3">
                 <div class="text-center">
@@ -68,8 +97,5 @@
         </div>
     </section>
 
-    <section class="bg-white">
-        <img src="{{ asset('img/mario.gif') }}" alt="" class="w-full h-auto">
-    </section>
 </div>
 @endsection

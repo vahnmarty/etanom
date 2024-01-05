@@ -9,7 +9,7 @@
     {{ $extraTop }}
     @endisset
 
-    <div class="w-full px-8 py-8 mt-6 overflow-hidden bg-white shadow-md sm:max-w-md sm:rounded-xl">
+    <div class="w-full px-8 py-4 mt-6 overflow-hidden bg-white shadow-md sm:px-8 sm:py-8 sm:max-w-md sm:rounded-xl">
         {{ $slot }}
     </div>
 </div>
