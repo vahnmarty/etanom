@@ -27,7 +27,7 @@ class PlantTableSeeder extends Seeder
                 'description' => 'Famous for its delicious fruits, the mango tree is a common sight in the Philippines.',
                 'minimum_price' => 40.00,
                 'maximum_price' => 80.00,
-                'thumbnail' => 'mango_thumbnail.jpg',
+                'thumbnail' => 'thumbnail.jpg',
                 'image' => 'mango_full.jpg',
             ],
             [
@@ -35,7 +35,7 @@ class PlantTableSeeder extends Seeder
                 'description' => 'A staple tree in tropical countries, providing coconuts for various purposes.',
                 'minimum_price' => 30.00,
                 'maximum_price' => 60.00,
-                'thumbnail' => 'coconut_thumbnail.jpg',
+                'thumbnail' => 'thumbnail.jpg',
                 'image' => 'coconut_full.jpg',
             ],
             [
@@ -43,7 +43,7 @@ class PlantTableSeeder extends Seeder
                 'description' => 'Known for its large, elongated leaves and clusters of bananas.',
                 'minimum_price' => 25.00,
                 'maximum_price' => 50.00,
-                'thumbnail' => 'banana_thumbnail.jpg',
+                'thumbnail' => 'thumbnail.jpg',
                 'image' => 'banana_full.jpg',
             ],
             [
@@ -51,7 +51,7 @@ class PlantTableSeeder extends Seeder
                 'description' => 'A hardwood tree with dark, reddish-brown wood used in construction.',
                 'minimum_price' => 60.00,
                 'maximum_price' => 120.00,
-                'thumbnail' => 'guijo_thumbnail.jpg',
+                'thumbnail' => 'thumbnail.jpg',
                 'image' => 'guijo_full.jpg',
             ],
             [
@@ -59,7 +59,7 @@ class PlantTableSeeder extends Seeder
                 'description' => 'Produces small, round fruits with a sweet and tangy taste.',
                 'minimum_price' => 35.00,
                 'maximum_price' => 70.00,
-                'thumbnail' => 'lanzones_thumbnail.jpg',
+                'thumbnail' => 'thumbnail.jpg',
                 'image' => 'lanzones_full.jpg',
             ],
             [
@@ -67,7 +67,7 @@ class PlantTableSeeder extends Seeder
                 'description' => 'A fruit-bearing tree with edible fruits that are rich in vitamins.',
                 'minimum_price' => 30.00,
                 'maximum_price' => 60.00,
-                'thumbnail' => 'guava_thumbnail.jpg',
+                'thumbnail' => 'thumbnail.jpg',
                 'image' => 'guava_full.jpg',
             ],
             [
@@ -75,7 +75,7 @@ class PlantTableSeeder extends Seeder
                 'description' => 'Known for its hard and durable wood, often used in furniture making.',
                 'minimum_price' => 70.00,
                 'maximum_price' => 140.00,
-                'thumbnail' => 'molave_thumbnail.jpg',
+                'thumbnail' => 'thumbnail.jpg',
                 'image' => 'molave_full.jpg',
             ],
             [
@@ -83,7 +83,7 @@ class PlantTableSeeder extends Seeder
                 'description' => 'Produces large, round fruits with sweet and sour taste.',
                 'minimum_price' => 40.00,
                 'maximum_price' => 80.00,
-                'thumbnail' => 'santol_thumbnail.jpg',
+                'thumbnail' => 'thumbnail.jpg',
                 'image' => 'santol_full.jpg',
             ],
             [
@@ -91,7 +91,7 @@ class PlantTableSeeder extends Seeder
                 'description' => 'Known for its distinctive umbrella-shaped canopy and valuable wood.',
                 'minimum_price' => 50.00,
                 'maximum_price' => 100.00,
-                'thumbnail' => 'acacia_thumbnail.jpg',
+                'thumbnail' => 'thumbnail.jpg',
                 'image' => 'acacia_full.jpg',
             ],
         ];
