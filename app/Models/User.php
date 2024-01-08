@@ -65,4 +65,14 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         return $this->buyer;
     }
+
+    public function myCart()
+    {
+        return $this->hasOne(Cart::class);
+    }
+
+    public function scopePlanters($query)
+    {
+        return $query->where('planter', true);
+    }
 }

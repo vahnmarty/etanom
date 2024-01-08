@@ -4,6 +4,7 @@ use App\Livewire\CartPage;
 use App\Livewire\ShopPage;
 use App\Livewire\Inventory;
 use App\Livewire\Milestone;
+use App\Livewire\MatchMaking;
 use App\Livewire\SetupProfile;
 use App\Livewire\ShopSeedballs;
 use App\Livewire\Order\Checkout;
@@ -44,6 +45,7 @@ Route::middleware('auth')->group(function () {
 Route::get('calculator', Calculator::class);
 Route::get('cart', CartPage::class);
 Route::get('milestone', Milestone::class);
+Route::get('find-match', MatchMaking::class);
 
 Route::group(['middleware' => 'auth'], function(){
     Route::get('setup', SetupProfile::class);
