@@ -21,6 +21,10 @@ class User extends Authenticatable implements MustVerifyEmail
         'name',
         'email',
         'password',
+        'funder',
+        'planter',
+        'verified_at',
+        'verified_by'
     ];
 
     /**
@@ -50,5 +54,15 @@ class User extends Authenticatable implements MustVerifyEmail
     public function seedballCredits()
     {
         return $this->seedballs()->whereNull('date_planted')->count();
+    }
+
+    public function isPlanter()
+    {
+        return $this->planter;
+    }
+
+    public function isBuyer()
+    {
+        return $this->buyer;
     }
 }

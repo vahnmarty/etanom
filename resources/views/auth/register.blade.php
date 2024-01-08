@@ -7,7 +7,7 @@
     </x-slot>
 
     <div class="text-center">
-        <h1 class="mb-3 text-lg font-bold md:text-3xl text-primary sm:mb-0">Create your account</h1>
+        <h1 class="mb-4 text-lg font-bold md:text-3xl text-primary sm:mb-0">Create your account</h1>
         <p class="hidden mt-2 text-gray-600 md:block">It's free and easy</p>
     </div>
 
@@ -20,6 +20,15 @@
         @csrf
 
         <div>
+            <x-label for="name" value="{{ __('Your Name') }}" class="hidden sm:block"/>
+            <select name="type" class="block w-full border-gray-300 rounded-md shadow-sm focus:border-darkgreen-500 focus:ring-darkgreen-500">
+                <option value="">-- Select a User Type --</option>
+                <option value="planter">I am a Planter</option>
+                <option value="funder">I am a Buyer</option>
+            </select>
+        </div>
+
+        <div class="mt-4">
             <x-label for="name" value="{{ __('Your Name') }}" class="hidden sm:block"/>
             <x-input id="name" class="block w-full mt-1" type="text" name="name" placeholder="Your Name" :value="old('name')" required autofocus autocomplete="name" />
         </div>
@@ -39,7 +48,7 @@
             <x-input id="password_confirmation" class="block w-full mt-1" type="password"  placeholder="Confirm Password" name="password_confirmation" required autocomplete="new-password" />
         </div>
 
-        <div class="mt-4">
+        <div class="mt-8">
             <div class="flex items-start">
                 <x-checkbox name="terms" class="-mb-1" id="terms" required />
 

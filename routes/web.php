@@ -13,7 +13,9 @@ use Illuminate\Support\Facades\Route;
 use App\Livewire\Order\CheckoutSuccess;
 use App\Http\Controllers\PageController;
 use App\Filament\Pages\PurchaseSeedballs;
+use App\Livewire\Planter\PlanterInventory;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\NewsletterController;
 
 /*
@@ -31,9 +33,7 @@ Route::get('/', [PageController::class, 'home'])->name('page.home');
 Route::get('/terms', [PageController::class, 'terms'])->name('page.terms');
 Route::get('/privacy', [PageController::class, 'privacy'])->name('page.privacy');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -53,6 +53,10 @@ Route::group(['middleware' => 'auth'], function(){
     Route::get('orders/{code}/checkout', Checkout::class)->name('orders.checkout');
     Route::get('orders/{code}/checkout-success', CheckoutSuccess::class)->name('orders.checkout-successful');
     Route::get('inventory', Inventory::class)->name('inventory.index');
+});
+
+Route::group(['middleware' => 'auth', 'prefix' => 'planter'], function(){
+    Route::get('inventory', PlanterInventory::class);
 });
 
 

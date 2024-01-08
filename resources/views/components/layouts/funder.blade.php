@@ -32,6 +32,7 @@
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-white dark:bg-gray-900">
             <div class="flex">
+                @include('includes.sidebar')
                 <aside class="flex-1">
                     @include('includes.app-header')
                     <main>

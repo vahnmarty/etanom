@@ -30,6 +30,10 @@ module.exports = {
                 yellow: colors.yellow,
                 'light-green': '#BCE13C',
                 'normal-green': '#4CA444',
+                'primary-orange': '#ED7D2B',
+            },
+            backgroundImage: {
+                'hero-pattern': "url('/img/hero-2.png')",
             }
         },
     },
