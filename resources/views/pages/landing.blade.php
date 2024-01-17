@@ -311,9 +311,9 @@
         </div>
     </section>
 
-    <section>
+    <section class="lg:hidden">
         <div class="px-8 pt-16">
-            <img src="{{ asset('img/carbon-footprint.png') }}" class="w-auto h-16" alt="">
+            <img src="{{ asset('img/carbon-footprint.png') }}" class="w-auto h-20" alt="">
             <p class="mt-8 text-gray-600">
                 We connect you directly to local farmers or community members to make sure your money is used to plant trees.
             </p>
