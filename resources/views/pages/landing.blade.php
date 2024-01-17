@@ -18,19 +18,17 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.core.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.theme.min.css">
+
     <!-- Scripts -->
-    @vite(['resources/css/app.css', 'resources/js/custom.js'])
+    @vite(['resources/css/app.css', 'resources/js/custom.js', 'resources/js/glide.js'])
 
 </head>
 
 <body class="font-sans antialiased text-gray-900">
-    <header 
-        x-data="{ open: false }"
-        x-on:scroll.window="open = window.scrollY > 20 "
-        x-show="open"
-        x-cloak
-        x-transition
-         class="fixed inset-x-0 top-0 z-50 bg-white shadow-sm">
+    <header x-data="{ open: false }" x-on:scroll.window="open = window.scrollY > 20 " x-show="open" x-cloak x-transition
+        class="fixed inset-x-0 top-0 z-50 bg-white shadow-sm">
         <div class="max-w-5xl mx-auto">
             <nav class="flex items-center justify-between px-6 py-3 lg:px-8" aria-label="Global">
                 <div class="flex lg:flex-1">
@@ -40,26 +38,25 @@
                     </a>
                 </div>
                 <div class="flex lg:hidden">
-                    <div class="relative" x-data="{ open: false }" @click.outside="open = false" @close.stop="open = false">
+                    <div class="relative" x-data="{ open: false }" @click.outside="open = false"
+                        @close.stop="open = false">
                         <div @click="open = ! open">
                             <button type="button" class="py-1 text-normal-green">
-                                <x-heroicon-o-shopping-cart class="flex-shrink-0 w-7 h-7"/>
+                                <x-heroicon-o-shopping-cart class="flex-shrink-0 h-7 w-7" />
                             </button>
                         </div>
-        
-                        <div x-show="open"
-                                x-transition:enter="transition ease-out duration-200"
-                                x-transition:enter-start="transform opacity-0 scale-95"
-                                x-transition:enter-end="transform opacity-100 scale-100"
-                                x-transition:leave="transition ease-in duration-75"
-                                x-transition:leave-start="transform opacity-100 scale-100"
-                                x-transition:leave-end="transform opacity-0 scale-95"
-                                class="absolute right-0 z-50 mt-2 origin-top-right rounded-md shadow-lg w-72"
-                                style="display: none;"
-                                @click="open = false">
+
+                        <div x-show="open" x-transition:enter="transition ease-out duration-200"
+                            x-transition:enter-start="transform opacity-0 scale-95"
+                            x-transition:enter-end="transform opacity-100 scale-100"
+                            x-transition:leave="transition ease-in duration-75"
+                            x-transition:leave-start="transform opacity-100 scale-100"
+                            x-transition:leave-end="transform opacity-0 scale-95"
+                            class="absolute right-0 z-50 mt-2 origin-top-right rounded-md shadow-lg w-72"
+                            style="display: none;" @click="open = false">
                             <div class="py-1 bg-white rounded-md ring-1 ring-black ring-opacity-5 dark:bg-gray-700">
                                 @auth
-                                @livewire('cart-summary')
+                                    @livewire('cart-summary')
                                 @endauth
                             </div>
                         </div>
@@ -69,263 +66,312 @@
         </div>
     </header>
 
-    <div class="bg-gray-900">
-        <header class="absolute inset-x-0 top-0 z-50">
-            <div class="max-w-5xl mx-auto">
-                <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
-                    <div class="flex lg:flex-1">
-                        <a href="#" class="-m-1.5 p-1.5">
-                            <span class="sr-only">etanom</span>
-                            <img src="{{ asset('img/logo-green.png') }}" class="w-auto h-10" alt="">
+    <header class="">
+        <div class="max-w-5xl mx-auto">
+            <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+                <div class="flex lg:flex-1">
+                    <a href="#" class="-m-1.5 p-1.5">
+                        <span class="sr-only">etanom</span>
+                        <img src="{{ asset('img/logo-green.png') }}" class="w-auto h-10" alt="">
+                    </a>
+                </div>
+                <div class="flex lg:hidden">
+                    <button type="button"
+                        class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                            aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+
+                    <div class="flex items-center gap-8 text-gray-900">
+                        <x-header-menu-link label="About" href="{{ url('/about') }}"
+                            active="{{ request()->is('/about') }}" />
+                        <x-header-menu-link label="FAQ" href="{{ url('/faq') }}"
+                            active="{{ request()->is('/faq') }}" />
+                        <x-header-menu-link label="Login" href="{{ url('/login') }}"
+                            active="{{ request()->is('/login') }}" />
+
+                        <a href="{{ route('register') }}"
+                            class="inline-flex items-center justify-center px-8 py-2 text-base font-medium text-gray-900 border border-transparent rounded-full shadow-sm bg-light-green hover:bg-light-green/80">
+                            Get Started
                         </a>
                     </div>
-                    <div class="flex lg:hidden">
-                        <button type="button"
-                            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400">
-                            <span class="sr-only">Open main menu</span>
-                            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-
-                        <div class="flex items-center gap-8 text-gray-900">
-                            <x-header-menu-link label="About" href="{{ url('/about') }}"
-                                active="{{ request()->is('/about') }}" />
-                            <x-header-menu-link label="FAQ" href="{{ url('/faq') }}"
-                                active="{{ request()->is('/faq') }}" />
-                            <x-header-menu-link label="Login" href="{{ url('/login') }}"
-                                active="{{ request()->is('/login') }}" />
-
-                            <a href="{{ route('register') }}"
-                                class="inline-flex items-center justify-center px-8 py-2 text-base font-medium text-gray-900 border border-transparent rounded-full shadow-sm bg-light-green hover:bg-light-green/80">
-                                Get Started
-                            </a>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-        </header>
-
-        <div class="relative overflow-hidden lg:h-screen isolate pt-14">
-            <img src="{{ asset('img/hero-2.png') }}" alt=""
-                class="absolute inset-0 object-cover w-full h-full -z-10">
-            <div class="absolute inset-x-0 overflow-hidden -top-40 -z-10 transform-gpu blur-3xl sm:-top-80"
-                aria-hidden="true">
-                <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
-                    style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
                 </div>
-            </div>
-            <div class="max-w-5xl px-0 py-16 mx-auto sm:py-48 lg:px-8 lg:py-32">
-                <div class="grid gap-8 lg:grid-cols-2">
-                    <div class="px-8">
-                        <h1 class="text-3xl font-bold text-center text-gray-900 lg:text-left lg:text-4xl">Connect to a
-                            local,<br>and plant a tree</h1>
-                        <p class="mt-8 text-lg text-center text-gray-500 lg:text-left">
-                            Directly fund a local farmer or community member to plant a tree for you.
-                        </p>
-                        <div class="mt-8 text-center lg:text-left">
-                            <a href="#plans"
-                                class="inline-block px-8 py-3 mx-auto mt-6 text-sm font-semibold text-white rounded-lg bg-primary-orange hover:bg-gray-900 md:inline-flex">
-                                Get Started
-                            </a>
-                        </div>
-                    </div>
-                    <div class="hidden lg:block">
-                        <img src="{{ asset('img/planting.png') }}" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
-                aria-hidden="true">
-                <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-20 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
-                    style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
-                </div>
-            </div>
+            </nav>
         </div>
-    </div>
-    <section class="bg-white" id="plans">
-        <div class="px-8 py-12 mx-auto max-w-7xl">
-            <div class="text-center">
-                <h6 class="font-bold uppercase text-normal-green">What you can do</h6>
-                <h2 class="hidden mt-8 text-xl font-bold text-gray-900 lg:block lg:text-4xl">The only click that gives you a green thumb</h2>
-                <p class="mt-8">Together we can help make the world greener and fairer!<br class="hidden lg:block"> Choose from different options and do your bit.</p>
-            </div>
-            <div class="grid gap-8 mt-8 lg:grid-cols-4">
-                <div class="relative grid flex-col justify-between grid-cols-2 p-6 text-gray-100 bg-green-900 rounded-lg lg:flex lg:p-6 lg:pb-0">
-                    <div>
-                        <div class="lg:h-[180px]">
-                            <h3 class="text-2xl font-bold lg:text-center">Plant a Tree</h3>
-                            <p class="mt-1 text-xs lg:mt-4 lg:text-base lg:text-center">
-                                Connect to a local and plant a native tree of your choice
-                            </p>
-                            <h4 class="mt-4 text-3xl font-bold lg:text-center">₱100</h4>
-                        </div>
+    </header>
 
-                        <div class="hidden text-center lg:block">
-                            <a href="#" class="inline-block px-8 py-2 text-base font-medium text-gray-100 transition-all bg-transparent border-2 border-white rounded-md hover:bg-white hover:text-normal-green">Buy Tree</a>
-                        </div>
-                    </div>
-                    <div>
-                        <img src="{{ asset('img/plant.png') }}" class="w-auto h-32 mx-auto" alt="">
-                    </div>
-                </div>
+    @php
+        use Jenssegers\Agent\Agent;
+        $agent = new Agent();
+    @endphp
 
-                <div class="relative grid flex-col justify-between grid-cols-2 p-6 text-gray-100 bg-yellow-600 rounded-lg lg:flex lg:p-6 lg:pb-0">
-                    <div>
-                        <div class="lg:h-[180px]">
-                            <h3 class="text-2xl font-bold lg:text-center">Plant & Grow Tree</h3>
-                            <p class="mt-1 text-xs lg:mt-4 lg:text-base lg:text-center">
-                                Includes monthly monitoring and maintenance
-                            </p>
-                        </div>
-                        <div class="hidden mb-4 text-center lg:block">
-                            <a href="#" class="inline-block px-8 py-2 text-base font-medium text-gray-100 transition-all bg-transparent border-2 border-white rounded-md hover:bg-white hover:text-normal-green">Subscribe</a>
-                        </div>
-                    </div>
-                    <div>
-                        <img src="{{ asset('img/sprout.png') }}" class="w-auto h-32 mx-auto" alt="">
-                    </div>
-                </div>
+    @if ($agent->isDesktop())
+        <div class="glide">
+            <div class="glide__track" data-glide-el="track">
+                <div class="glide__slides">
+                    <div class="glide__slide bg-emerald-700 md:h-[500px]">
+                        <div class="max-w-5xl py-12 mx-auto">
+                            <div class="grid grid-cols-2">
+                                <div>
+                                    <h2 class="text-4xl font-bold text-white">Plant Tree</h2>
+                                    <p class="mt-8 text-gray-200">
+                                        With our unique approach, you can directly connect with local farmers to plant
+                                        native trees, fostering biodiversity and supporting local ecosystems. After
+                                        successfully purchasing a tree, receive a personalized tree-planting
+                                        certificate,
+                                        symbolizing your commitment to a greener future.
+                                    </p>
+                                    <p class="mt-8 text-gray-200">
+                                        Together, let's cultivate change
+                                        and leave a lasting legacy for generations to come. Start your tree-planting
+                                        journey
+                                        today!
+                                    </p>
 
-                <div class="relative grid flex-col justify-between grid-cols-2 p-6 text-gray-100 bg-yellow-700 rounded-lg lg:flex lg:p-6 lg:pb-0">
-                    <div>
-                        <div class="lg:h-[180px]">
-                            <h3 class="text-2xl font-bold lg:text-center">Support a Farmer</h3>
-                            <p class="mt-1 text-xs lg:mt-4 lg:text-base lg:text-center">
-                                Plant a fruit-bearing tree to support a local farmer
-                            </p>
-                            <h4 class="mt-4 text-3xl font-bold lg:text-center">₱500</h4>
-                        </div>
-                        <div class="hidden mb-4 text-center lg:block">
-                            <a href="#" class="inline-block px-8 py-2 text-base font-medium text-gray-100 transition-all bg-transparent border-2 border-white rounded-md hover:bg-white hover:text-normal-green">Get Started</a>
-                        </div>
-                    </div>
-                    <div>
-                        <img src="{{ asset('img/farmer.png') }}" class="w-auto h-32 mx-auto" alt="">
-                    </div>
-                </div>
-
-                <div class="relative grid flex-col justify-between grid-cols-2 p-6 text-gray-100 bg-green-700 rounded-lg lg:flex lg:p-6 lg:pb-0">
-                    <div>
-                        <div class="lg:h-[180px]">
-                            <h3 class="text-xl font-bold lg:text-2xl lg:text-center">Plant Tree using Drone</h3>
-                            <p class="mt-1 text-xs lg:mt-4 lg:text-base lg:text-center">
-                                Plant a tree using drone that spreads seedball and Earth Pill biotechnology
-                            </p>
-                            <h4 class="mt-4 font-bold lg:text-3xl lg:text-center lg:hidden">₱25 per 5 seedballs</h4>
-                        </div>
-                        <div class="hidden mb-4 text-center lg:block">
-                            <a href="#" class="inline-block px-8 py-2 text-base font-medium text-gray-100 transition-all bg-transparent border-2 border-white rounded-md hover:bg-white hover:text-normal-green">Get Started</a>
-                        </div>
-                    </div>
-                    <div>
-                        <img src="{{ asset('img/drone.png') }}" class="w-auto h-32 mx-auto" alt="">
-                    </div>
-                </div>
-            </div>
-
-            <p class="hidden text-3xl font-bold text-center my-7 lg:block">OR</p>
-
-            <div class="flex justify-center mt-8">
-                <div class="grid max-w-xl grid-cols-2 p-8 text-gray-100 rounded-lg bg-sky-700 ">
-                    <div>
-                        <h3 class="text-xl font-bold lg:text-2xl">Become a Tree Planter</h3>
-                        <p class="mt-1 text-xs lg:mt-4 lg:text-base">
-                            Are you a part of community who wanted to earn by planting tree?
-                        </p>
-
-                        <div class="mt-8 m lg:block">
-                            <a href="#" class="relative inline-flex items-center gap-4 px-8 py-2 pr-10 text-base font-medium text-gray-100 transition-all border-2 border-green-900 rounded-full hover:bg-green-600 hover:text-text-gray-100 hover:border-white bg-normal-green">
-                                Apply Now
-                                <div class="absolute flex items-center justify-center p-1 bg-green-700 rounded-full right-1 w-7 h-7">
-                                    <x-heroicon-s-chevron-right class="w-5 h-5"/>
+                                    <div class="mt-8">
+                                        <a href="{{ url('plant-tree') }}"
+                                            class="inline-flex items-center justify-center px-8 py-2 text-base font-medium text-gray-900 border border-transparent rounded-full shadow-sm bg-light-green hover:bg-light-green/80">
+                                            Get Started
+                                        </a>
+                                    </div>
                                 </div>
-                            </a>
+                                <div>
+                                    <img src="{{ asset('img/planting.png') }}" alt="">
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="lg:mt-8">
-                        <img src="{{ asset('img/farmer-2.png') }}" class="w-auto h-32 mx-auto" alt="">
+                    <div class="glide__slide bg-lime-700 md:h-[500px]">
+                        <div class="max-w-5xl py-12 mx-auto">
+                            <div class="grid grid-cols-2 gap-8">
+                                <div>
+                                    <h2 class="text-4xl font-bold text-white">Plant and Grow a Tree</h2>
+                                    <p class="mt-8 text-gray-200">
+                                        Plant a tree effortlessly, receive a beautifully crafted tree planting
+                                        certificate,
+                                        and dive into the future of eco-conscious living. With our unique subscription
+                                        service, not only can you monitor the growth and well-being of your tree, but
+                                        you
+                                        can also explore its development through cutting-edge GIS technology and LIDAR.
+                                        Witness the impact of your contribution in real-time, as we blend nature with
+                                        innovation.
+                                    </p>
+                                    <p class="mt-8 text-gray-200">
+                                        Join us in cultivating a greener, healthier planet—one technologically nurtured
+                                        tree
+                                        at a time. Start your tree-growing journey today!
+                                    </p>
+
+                                    <div class="mt-8">
+                                        <a href="{{ url('plant-grow-tree') }}"
+                                            class="inline-flex items-center justify-center px-8 py-2 text-base font-medium text-gray-900 border border-transparent rounded-full shadow-sm bg-light-green hover:bg-light-green/80">
+                                            Subscribe
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <img src="{{ asset('img/banner/plant-grow-tree.jpg') }}" class="mx-auto"
+                                        alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="glide__slide bg-orange-600 md:h-[500px]">
+                        <div class="max-w-5xl py-12 mx-auto">
+                            <div class="grid grid-cols-2 gap-8">
+                                <div>
+                                    <h2 class="text-4xl font-bold text-white">Support a Farmer</h2>
+                                    <p class="mt-8 text-gray-200">
+                                        Empower farmers by channeling funds straight to the grassroots, fostering
+                                        sustainable farming practices and community development. By participating, you
+                                        become a catalyst for change, bridging the gap between urban supporters and
+                                        rural
+                                        farmers. Join us in cultivating a thriving agricultural landscape, where your
+                                        contributions directly uplift farmers and their communities.
+                                    </p>
+                                    <p class="mt-8 text-gray-200"> Together, let's sow
+                                        the seeds of prosperity for farmers across the nation!
+                                    </p>
+
+                                    <div class="mt-8">
+                                        <a href="{{ url('support-farmer') }}"
+                                            class="inline-flex items-center justify-center px-8 py-2 text-base font-medium text-gray-900 border border-transparent rounded-full shadow-sm bg-light-green hover:bg-light-green/80">
+                                            Get Started
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <img src="{{ asset('img/banner/farmer.jpg') }}" class="mx-auto" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="glide__slide bg-sky-700 md:h-[500px]">
+                        <div class="max-w-5xl py-12 mx-auto">
+                            <div class="grid grid-cols-2 gap-8">
+                                <div>
+                                    <h2 class="text-4xl font-bold text-white">Plant a Tree using Drone</h2>
+                                    <p class="mt-8 text-gray-200">
+                                        Harnessing the speed and efficiency of drones, tree planting has never been
+                                        faster
+                                        or easier. Our innovative approach employs GIS technology to monitor every
+                                        detail,
+                                        ensuring the success of your environmental contribution. The drone precisely
+                                        delivers native tree seedlings encapsulated in seedballs and earth pills.
+                                    </p>
+                                    <p class="mt-8 text-gray-200">
+                                        Join us in revolutionizing environmental conservation—one tree, one drone at a
+                                        time.
+                                        Plant the seeds of change effortlessly and make a lasting impact on our Earth!
+                                    </p>
+
+                                    <div class="mt-8">
+                                        <a href="{{ url('drone') }}"
+                                            class="inline-flex items-center justify-center px-8 py-2 text-base font-medium text-gray-900 border border-transparent rounded-full shadow-sm bg-light-green hover:bg-light-green/80">
+                                            Get Started
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="self-center text-center">
+                                    <img src="{{ asset('img/banner/drone.png') }}" class="mx-auto" alt="">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="relative hidden bg-white">
-        <img src="{{ asset('img/wave-white-top.png') }}" class="absolute w-full -top-6 sm:-top-8 lg:-top-16" alt="">
-        <div class="max-w-5xl px-8 py-16 mx-auto lg:py-24">
-            <div class="grid gap-8 sm:grid-cols-3">
-                <div class="text-center">
-                    <img src="{{ asset('img/carbon-footprint.png') }}" alt="" class="w-32 h-32 mx-auto">
-
-                    <h3 class="mt-8 text-lg font-bold text-normal-green">Direct impact</h3>
-                    <p class="mt-2 text-sm text-gray-600">
-                        We connect you directly to local farmers to make sure your money is used directly to plant
-                        trees.
-                    </p>
-                </div>
-
-                <div class="text-center">
-                    <img src="{{ asset('img/coin.png') }}" alt="" class="w-32 h-32 mx-auto">
-
-                    <h3 class="mt-8 text-lg font-bold text-normal-green">Provide livelihood</h3>
-                    <p class="mt-2 text-sm text-gray-600">
-                        Farmers gain income while restoring and protecting local landscapes
-                    </p>
-                </div>
-
-                <div class="text-center">
-                    <img src="{{ asset('img/dashboard.png') }}" alt="" class="w-32 h-32 mx-auto">
-
-                    <h3 class="mt-8 text-lg font-bold text-normal-green">Monitor your Progress</h3>
-                    <p class="mt-2 text-sm text-gray-600">
-                        Keep track of where you money goes, and your environmental impact.
-                    </p>
-                </div>
-
+            <div class="glide__bullets" data-glide-el="controls[nav]">
+                <button class="glide__bullet" data-glide-dir="=0"></button>
+                <button class="glide__bullet" data-glide-dir="=1"></button>
+                <button class="glide__bullet" data-glide-dir="=2"></button>
+                <button class="glide__bullet" data-glide-dir="=3"></button>
+                <button class="glide__bullet" data-glide-dir="=4"></button>
             </div>
         </div>
+    @else
+        <div class="relative block h-64 overflow-hidden">
+            <img src="{{ asset('img/hero-2.png') }}" alt="" class="">
+            <div class="absolute inset-0 z-10 p-10">
+                <img src="{{ asset('img/planting.png') }}" class="scale-75">
+            </div>
+        </div>
+    @endif
+
+    <section class="p-4 bg-white lg:hidden">
+        <div class="grid grid-cols-2 gap-2">
+
+            <div class="flex flex-col items-center p-4 space-y-3 rounded-xl bg-emerald-700">
+                <img src="{{ asset('img/plant-a-tree 1.png') }}" class="w-12 h-12" alt="">
+                <h3 class="font-bold text-white uppercase">Plant a Tree</h3>
+                <p class="text-4xl font-bold text-white">P100</p>
+            </div>
+
+            <div class="flex flex-col items-center p-4 space-y-3 rounded-xl bg-lime-600">
+                <img src="{{ asset('img/plant-a-tree 2.png') }}" class="w-12 h-12" alt="">
+                <h3 class="font-bold text-center text-white uppercase">Plant and Grow a Tree</h3>
+                <a href=""
+                    class="relative inline-flex items-center gap-4 px-6 py-1 text-sm font-medium text-gray-900 transition-all bg-white border-2 border-green-900 rounded-full hover:text-text-gray-100 hover:border-white hover:bg-green-600">
+                    Subscribe
+                </a>
+            </div>
+
+            <div class="flex flex-col items-center p-4 space-y-3 bg-orange-500 rounded-xl">
+                <img src="{{ asset('img/plant-a-tree 3.png') }}" class="w-12 h-12" alt="">
+                <h3 class="font-bold text-center text-white uppercase">Support a Farmer</h3>
+                <p class="text-4xl font-bold text-white">P500</p>
+            </div>
+
+            <div class="flex flex-col items-center p-4 space-y-3 bg-yellow-500 rounded-xl">
+                <img src="{{ asset('img/plant-a-tree 4.png') }}" class="w-12 h-12" alt="">
+                <h3 class="font-bold text-center text-white uppercase">Plant Trees using Drone</h3>
+                <p class="text-2xl font-bold leading-5 text-center text-white">P25 <small> for 5 seedballs</small></p>
+            </div>
+
+            <div class="flex justify-between col-span-2 p-8 rounded-xl bg-rose-400">
+                <div>
+                    <h3 class="text-2xl font-bold text-white uppercase">Become a Tree Planter</h3>
+                    <div class="mt-4">
+                        <a href=""
+                            class="relative inline-flex items-center gap-4 px-6 py-1 text-sm font-medium text-gray-900 transition-all bg-white border-2 border-green-900 rounded-full hover:text-text-gray-100 hover:border-white hover:bg-green-600">
+                            Apply Now
+                        </a>
+                    </div>
+                </div>
+
+                <img src="{{ asset('img/planting 1.png') }}" class="self-center w-24 h-24" alt="">
+
+            </div>
+
+        </div>
     </section>
 
-    <section class="py-16"></section>
+    <section>
+        <div class="px-8 pt-16">
+            <img src="{{ asset('img/carbon-footprint.png') }}" class="w-auto h-16" alt="">
+            <p class="mt-8 text-gray-600">
+                We connect you directly to local farmers or community members to make sure your money is used to plant trees.
+            </p>
+        </div>
+        <div class="relative flex justify-end px-8 py-10 text-right">
+            <img src="{{ asset('img/blue-side-wave.png') }}" alt="" class="absolute top-0 left-0">
+            <div>
+                <img src="{{ asset('img/coin.png') }}" class="w-auto h-20 ml-auto" alt="">
+                <p class=" w-[60%] ml-auto mt-4 text-gray-600">
+                    Farmers gain income while restoring and protecting local landscapes
+                </p>
+            </div>
+        </div>
+        <div class="flex flex-col items-center justify-center gap-4 px-8 py-16">
+            <img src="{{ asset('img/dashboard.png') }}" class="w-40 h-auto" alt="">
+            <h4 class="text-2xl font-bold text-normal-green">Monitor your Progress</h4>
+            <p class="text-center text-gray-600">
+                Keep track of where you money goes, and your impact.
+            </p>
+        </div>
 
-    <div x-data="{ open: false }"
-        x-on:scroll.window="open = window.scrollY > 20 "
+        <img src="{{ asset('img/green-bottom-wave.png') }}" class="w-full" alt="">
+    </section>
+
+    <div x-data="{ open: true }" 
+        x-on:scrollzzz.window="open = window.scrollY > 10"
         x-show="open"
         x-cloak
-        x-transition
-        class="fixed bottom-0 left-0 right-0 px-4 py-2 bg-white border-t shadow-inner lg:hidden">
+        x-transition class="fixed bottom-0 left-0 right-0 px-4 py-2 bg-white border-t shadow-inner lg:hidden">
         <div class="flex items-center gap-3 justify-evenly">
             <div class="flex flex-col items-center justify-center">
                 <div class="h-6">
-                    <x-heroicon-o-home class="w-5 h-5 text-gray-600"/>
+                    <x-heroicon-o-home class="w-5 h-5 text-gray-600" />
                 </div>
                 <span class="mt-0.5 text-xs">Home</span>
             </div>
             <div class="flex flex-col items-center justify-center">
                 <div class="h-6">
-                    <x-heroicon-o-user class="w-5 h-5 text-gray-600"/>
+                    <x-heroicon-o-user class="w-5 h-5 text-gray-600" />
                 </div>
                 <span class="mt-0.5 text-xs">Account</span>
             </div>
             <div class="flex flex-col items-center justify-center">
-                <div class="flex items-center justify-center w-16 h-16 p-4 -mt-8 bg-white border rounded-full shadow-md">
-                    <x-heroicon-s-bolt class="w-10 h-10 text-green-700"/>
+                <div
+                    class="flex items-center justify-center w-16 h-16 p-4 -mt-8 bg-white border rounded-full shadow-md">
+                    <x-heroicon-s-bolt class="w-10 h-10 text-green-700" />
                 </div>
                 <span class="mt-0.5 text-xs">Plant</span>
             </div>
             <div class="flex flex-col items-center justify-center">
                 <div class="h-6">
-                    <x-heroicon-o-chat-bubble-bottom-center-text class="w-5 h-5 text-gray-600"/>
+                    <x-heroicon-o-chat-bubble-bottom-center-text class="w-5 h-5 text-gray-600" />
                 </div>
                 <span class="mt-0.5 text-xs">Inbox</span>
             </div>
             <div class="flex flex-col items-center justify-center">
                 <div class="h-6">
-                    <x-heroicon-o-bars-3 class="w-5 h-5 text-gray-600"/>
+                    <x-heroicon-o-bars-3 class="w-5 h-5 text-gray-600" />
                 </div>
                 <span class="mt-0.5 text-xs">Menu</span>
             </div>
