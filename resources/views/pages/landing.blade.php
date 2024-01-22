@@ -264,48 +264,53 @@
     @endif
 
     <section class="p-4 bg-white lg:hidden">
-        <div class="grid grid-cols-2 gap-2">
+        <div class="grid grid-cols-2 gap-4">
 
-            <div class="flex flex-col items-center p-4 space-y-3 rounded-xl bg-emerald-700">
-                <img src="{{ asset('img/plant-a-tree 1.png') }}" class="w-12 h-12" alt="">
-                <h3 class="font-bold text-white uppercase">Plant a Tree</h3>
-                <p class="text-4xl font-bold text-white">P100</p>
+            <div class="flex col-span-2 gap-3 px-8 py-8 rounded-xl bg-emerald-700 min-h-52">
+                <img src="{{ asset('img/plant-a-tree 6.png') }}" class="self-center flex-shrink-0 w-20 h-20" alt="">
+                <div class="space-y-2">
+                    <h3 class="text-3xl font-bold text-white uppercase">Plant a Tree</h3>
+                    <p class="text-gray-100">Connect to a local and plant a tree of your choice</p>
+                    <p class="text-3xl font-bold text-white">P100</p>
+                </div>
             </div>
 
-            <div class="flex flex-col items-center p-4 space-y-3 rounded-xl bg-lime-600">
-                <img src="{{ asset('img/plant-a-tree 2.png') }}" class="w-12 h-12" alt="">
-                <h3 class="font-bold text-center text-white uppercase">Plant and Grow a Tree</h3>
-                <a href=""
-                    class="relative inline-flex items-center gap-4 px-6 py-1 text-sm font-medium text-gray-900 transition-all bg-white border-2 border-green-900 rounded-full hover:text-text-gray-100 hover:border-white hover:bg-green-600">
-                    Subscribe
-                </a>
-            </div>
-
-            <div class="flex flex-col items-center p-4 space-y-3 bg-orange-500 rounded-xl">
-                <img src="{{ asset('img/plant-a-tree 3.png') }}" class="w-12 h-12" alt="">
-                <h3 class="font-bold text-center text-white uppercase">Support a Farmer</h3>
-                <p class="text-4xl font-bold text-white">P500</p>
-            </div>
-
-            <div class="flex flex-col items-center p-4 space-y-3 bg-yellow-500 rounded-xl">
-                <img src="{{ asset('img/plant-a-tree 4.png') }}" class="w-12 h-12" alt="">
-                <h3 class="font-bold text-center text-white uppercase">Plant Trees using Drone</h3>
-                <p class="text-2xl font-bold leading-5 text-center text-white">P25 <small> for 5 seedballs</small></p>
-            </div>
-
-            <div class="flex justify-between col-span-2 p-8 rounded-xl bg-rose-400">
-                <div>
-                    <h3 class="text-2xl font-bold text-white uppercase">Become a Tree Planter</h3>
-                    <div class="mt-4">
-                        <a href=""
-                            class="relative inline-flex items-center gap-4 px-6 py-1 text-sm font-medium text-gray-900 transition-all bg-white border-2 border-green-900 rounded-full hover:text-text-gray-100 hover:border-white hover:bg-green-600">
-                            Apply Now
-                        </a>
-                    </div>
+            <div class="flex col-span-2 gap-2 px-8 py-8 bg-yellow-500 rounded-xl min-h-52">
+                <div class="space-y-2">
+                    <h3 class="text-2xl font-bold text-yellow-800 uppercase">Plant & Grow a Tree</h3>
+                    <p class="text-sm text-yellow-800">Avail a monthly or yearly monitoring and maintenance </p>
+                    <a href=""
+                        class="relative inline-flex items-center gap-4 px-6 py-1 mt-3 text-sm font-medium text-white uppercase transition-all bg-orange-600 rounded-full hover:text-text-gray-100 hover:border-white hover:bg-green-600">
+                        Subscribe
+                    </a>
                 </div>
 
-                <img src="{{ asset('img/planting 1.png') }}" class="self-center w-24 h-24" alt="">
+                <img src="{{ asset('img/plant-a-tree 7.png') }}" class="self-center flex-shrink-0 w-28 h-28" alt="">
+            </div>
 
+            <div class="flex col-span-2 gap-3 px-6 py-8 rounded-xl bg-brown-600 min-h-52">
+                <img src="{{ asset('img/plant-a-tree 8.png') }}" class="self-center flex-shrink-0 w-28 h-28" alt="">
+                <div class="space-y-2">
+                    <h3 class="text-2xl font-bold text-white uppercase">Support a Farmer</h3>
+                    <p class="text-gray-100">Plant a fruit-bearing tree to support a local farmer</p>
+                    <p class="text-3xl font-bold text-white">P100</p>
+                </div>
+            </div>
+
+
+            <div class="p-6 bg-emerald-600 rounded-xl">
+                <div class="flex justify-between">
+                    <h3 class="font-bold text-white uppercase">Drone Planting</h3>
+                    <img src="{{ asset('img/plant-a-tree 5.png') }}" class="w-12 h-12" alt="">
+                </div>
+                <p class="mt-4 text-sm text-white">Disperse seedballs and earth pills </p>
+                <p class="mt-2 text-base font-bold leading-5 text-white">P25 for 5 seed-balls</p>
+            </div>
+
+            <div class="flex flex-col p-6 rounded-xl bg-rose-400">
+
+                <img src="{{ asset('img/planting 2.png') }}" class="self-center w-24 h-24" alt="">
+                <h3 class="text-xl font-bold text-center text-white uppercase">Become a Tree Planter</h3>
             </div>
 
         </div>
@@ -336,6 +341,38 @@
         </div>
 
         <img src="{{ asset('img/green-bottom-wave.png') }}" class="w-full" alt="">
+    </section>
+    <section class="h-screen -mt-10 border-t bg-wave-green">
+        <h2 class="text-3xl font-bold text-center text-white">In the News</h2>
+
+        <div class="glide">
+            <div class="pb-10 glide__track" data-glide-el="track">
+                <div class="glide__slides">
+                    <div class="glide__slide">
+                        <div class="flex justify-center px-8 mt-8">
+                            <img src="{{ asset('img/news/ecothon-korea.png') }}" class="h-auto w-72" alt="">
+                        </div>
+                        <div class="px-16 py-8 mt-8">
+                            <p class="text-gray-100">
+                                Once again, we bagged the Winning Award for the Ecothon 2023 at the COMEUP Global Startup Festival in Seoul, South Korea last November 9, 2023.
+                            </p>
+                            <div class="mt-8 text-center">
+                                <a href="https://www.dti.gov.ph/news/philippine-startups-shine-at-asean-korea-startup-week-2023-and-ecothon-2023/"
+                                    target="_blank"
+                                    class="relative inline-flex items-center gap-4 px-6 py-1 mt-3 text-sm font-medium text-white uppercase transition-all bg-orange-600 rounded-full hover:text-text-gray-100 hover:border-white hover:bg-green-600">
+                                    Read More
+                            </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="glide__bullets" data-glide-el="controls[nav]">
+                <button class="glide__bullet" data-glide-dir="=0"></button>
+                <button class="glide__bullet" data-glide-dir="=1"></button>
+                <button class="glide__bullet" data-glide-dir="=2"></button>
+            </div>
+        </div>
     </section>
 
     <div x-data="{ open: true }" 
