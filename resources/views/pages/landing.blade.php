@@ -266,14 +266,14 @@
     <section class="p-4 bg-white lg:hidden">
         <div class="grid grid-cols-2 gap-4">
 
-            <div class="flex col-span-2 gap-3 px-8 py-8 rounded-xl bg-emerald-700 min-h-52">
+            <a href="{{ url('plant-tree') }}" class="flex col-span-2 gap-3 px-8 py-8 rounded-xl bg-emerald-700 min-h-52">
                 <img src="{{ asset('img/plant-a-tree 6.png') }}" class="self-center flex-shrink-0 w-20 h-20" alt="">
                 <div class="space-y-2">
                     <h3 class="text-3xl font-bold text-white uppercase">Plant a Tree</h3>
                     <p class="text-gray-100">Connect to a local and plant a tree of your choice</p>
                     <p class="text-3xl font-bold text-white">P100</p>
                 </div>
-            </div>
+            </a>
 
             <div class="flex col-span-2 gap-2 px-8 py-8 bg-yellow-500 rounded-xl min-h-52">
                 <div class="space-y-2">
