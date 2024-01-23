@@ -27,6 +27,19 @@
 </head>
 
 <body class="font-sans antialiased text-gray-900">
+
+    <x-modal name="coming-soon"  focusable>
+        <div class="px-8 py-12">
+            <h2 class="text-3xl font-bold text-center text-normal-green">Sprouting <strong class="text-orange-600">Soon</strong></h2>
+            <div class="mt-10">
+                <p class="text-lg text-center">
+                    We are currently gathering our local planters and tree seedlings. We’ll let you know when they’re available
+                </p>
+            </div>
+        </div>
+    </x-modal>
+
+
     <header x-data="{ open: false }" x-on:scroll.window="open = window.scrollY > 20 " x-show="open" x-cloak x-transition
         class="fixed inset-x-0 top-0 z-50 bg-white shadow-sm">
         <div class="max-w-5xl mx-auto">
@@ -266,7 +279,10 @@
     <section class="p-4 bg-white lg:hidden">
         <div class="grid grid-cols-2 gap-4">
 
-            <a href="{{ url('plant-tree') }}" class="flex col-span-2 gap-3 px-8 py-8 rounded-xl bg-emerald-700 min-h-52">
+            <a href="{{ url('plant-tree') }}" 
+                x-data
+                x-on:click.prevent="$dispatch('open-modal', 'coming-soon')"
+                class="flex col-span-2 gap-3 px-8 py-8 rounded-xl bg-emerald-700 min-h-52">
                 <img src="{{ asset('img/plant-a-tree 6.png') }}" class="self-center flex-shrink-0 w-20 h-20" alt="">
                 <div class="space-y-2">
                     <h3 class="text-3xl font-bold text-white uppercase">Plant a Tree</h3>
@@ -275,7 +291,9 @@
                 </div>
             </a>
 
-            <div class="flex col-span-2 gap-2 px-8 py-8 bg-yellow-500 rounded-xl min-h-52">
+            <div x-data
+                 x-on:click.prevent="$dispatch('open-modal', 'coming-soon')"
+                 class="flex col-span-2 gap-2 px-8 py-8 bg-yellow-500 rounded-xl min-h-52">
                 <div class="space-y-2">
                     <h3 class="text-2xl font-bold text-yellow-800 uppercase">Plant & Grow a Tree</h3>
                     <p class="text-sm text-yellow-800">Avail a monthly or yearly monitoring and maintenance </p>
@@ -288,7 +306,9 @@
                 <img src="{{ asset('img/plant-a-tree 7.png') }}" class="self-center flex-shrink-0 w-28 h-28" alt="">
             </div>
 
-            <div class="flex col-span-2 gap-3 px-6 py-8 rounded-xl bg-brown-600 min-h-52">
+            <div x-data
+            x-on:click.prevent="$dispatch('open-modal', 'coming-soon')" 
+            class="flex col-span-2 gap-3 px-6 py-8 rounded-xl bg-brown-600 min-h-52">
                 <img src="{{ asset('img/plant-a-tree 8.png') }}" class="self-center flex-shrink-0 w-28 h-28" alt="">
                 <div class="space-y-2">
                     <h3 class="text-2xl font-bold text-white uppercase">Support a Farmer</h3>
@@ -298,7 +318,9 @@
             </div>
 
 
-            <div class="p-6 bg-emerald-600 rounded-xl">
+            <div x-data
+            x-on:click.prevent="$dispatch('open-modal', 'coming-soon')"
+            class="p-6 bg-emerald-600 rounded-xl">
                 <div class="flex justify-between">
                     <h3 class="font-bold text-white uppercase">Drone Planting</h3>
                     <img src="{{ asset('img/plant-a-tree 5.png') }}" class="w-12 h-12" alt="">
@@ -307,7 +329,9 @@
                 <p class="mt-2 text-base font-bold leading-5 text-white">P25 for 5 seed-balls</p>
             </div>
 
-            <div class="flex flex-col p-6 rounded-xl bg-rose-400">
+            <div x-data
+            x-on:click.prevent="$dispatch('open-modal', 'coming-soon')"
+            class="flex flex-col p-6 rounded-xl bg-rose-400">
 
                 <img src="{{ asset('img/planting 2.png') }}" class="self-center w-24 h-24" alt="">
                 <h3 class="text-xl font-bold text-center text-white uppercase">Become a Tree Planter</h3>
