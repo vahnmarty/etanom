@@ -9,6 +9,7 @@
         "adyen/php-api-library": "^16.1",
         "aws/aws-sdk-php": "^3.261",
         "blade-ui-kit/blade-icons": "^1.5",
+        "codeat3/blade-phosphor-icons": "^2.0",
         "doctrine/dbal": "^3.0",
         "filament/filament": "^3.0-stable",
         "guzzlehttp/guzzle": "^7.2",

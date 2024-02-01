@@ -19,7 +19,7 @@
             <div class="flex flex-col items-center justify-center">
                 <div
                     class="flex items-center justify-center w-16 h-16 p-4 -mt-8 bg-white border rounded-full shadow-md">
-                    <x-heroicon-s-bolt class="w-10 h-10 text-green-700" />
+                    <x-phosphor-plant-fill class="w-10 h-10 text-green-700" />
                 </div>
                 <span class="mt-0.5 text-xs">Plant</span>
             </div>
